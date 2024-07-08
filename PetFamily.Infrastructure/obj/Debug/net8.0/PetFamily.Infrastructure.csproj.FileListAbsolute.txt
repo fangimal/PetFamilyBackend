@@ -1,0 +1,17 @@
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\bin\Debug\net8.0\PetFamily.Infrastructure.deps.json
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\bin\Debug\net8.0\PetFamily.Infrastructure.runtimeconfig.json
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\bin\Debug\net8.0\PetFamily.Infrastructure.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\bin\Debug\net8.0\PetFamily.Infrastructure.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\bin\Debug\net8.0\PetFamily.Domain.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\bin\Debug\net8.0\PetFamily.Domain.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.csproj.AssemblyReference.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.AssemblyInfoInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.AssemblyInfo.cs
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamil.4D8BD3A0.Up2Date
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\refint\PetFamily.Infrastructure.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\PetFamily.Infrastructure.genruntimeconfig.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Infrastructure\obj\Debug\net8.0\ref\PetFamily.Infrastructure.dll

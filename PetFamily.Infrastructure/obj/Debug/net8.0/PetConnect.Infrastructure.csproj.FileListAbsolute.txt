@@ -1,0 +1,17 @@
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\bin\Debug\net8.0\PetConnect.Infrastructure.deps.json
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\bin\Debug\net8.0\PetConnect.Infrastructure.runtimeconfig.json
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\bin\Debug\net8.0\PetConnect.Infrastructure.dll
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\bin\Debug\net8.0\PetConnect.Infrastructure.pdb
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\bin\Debug\net8.0\PetConnect.Domain.dll
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\bin\Debug\net8.0\PetConnect.Domain.pdb
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.csproj.AssemblyReference.cache
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.AssemblyInfoInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.AssemblyInfo.cs
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConne.4BAEE151.Up2Date
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.dll
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\refint\PetConnect.Infrastructure.dll
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.pdb
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\PetConnect.Infrastructure.genruntimeconfig.cache
+D:\Learn\C#\Boosty\Exersiese\PetConnect\PetConnect.Infrastructure\obj\Debug\net8.0\ref\PetConnect.Infrastructure.dll

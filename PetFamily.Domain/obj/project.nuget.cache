@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YRJGl59vohwP5hRvwAU5/KaLt69P2GSFpjTk0/e7CyHRqeSEnzQVoEloP6pXNIBEeDaLJzOLipLfXaL1u+NwlQ==",
+  "success": true,
+  "projectFilePath": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetFamily\\PetFamily.Domain\\PetFamily.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\csharpfunctionalextensions\\2.42.5\\csharpfunctionalextensions.2.42.5.nupkg.sha512"
+  ],
+  "logs": []
+}

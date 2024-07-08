@@ -1,0 +1,12 @@
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\bin\Debug\net8.0\PetFamily.Domain.deps.json
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\bin\Debug\net8.0\PetFamily.Domain.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\bin\Debug\net8.0\PetFamily.Domain.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.csproj.AssemblyReference.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.AssemblyInfoInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.AssemblyInfo.cs
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.csproj.CoreCompileInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\refint\PetFamily.Domain.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\PetFamily.Domain.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.Domain\obj\Debug\net8.0\ref\PetFamily.Domain.dll

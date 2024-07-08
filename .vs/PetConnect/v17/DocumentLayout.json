@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetConnect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B894C98D-DD2C-4E68-9CEA-22C6D70CBCBB}|PetConnect.Domain\\PetConnect.Domain.csproj|d:\\learn\\c#\\boosty\\exersiese\\petconnect\\petconnect.domain\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B894C98D-DD2C-4E68-9CEA-22C6D70CBCBB}|PetConnect.Domain\\PetConnect.Domain.csproj|solutionrelative:petconnect.domain\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50419828-A7D3-4E41-B0A8-116AC109D6F0}|PetConnect.API\\PetConnect.API.csproj|d:\\learn\\c#\\boosty\\exersiese\\petconnect\\petconnect.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50419828-A7D3-4E41-B0A8-116AC109D6F0}|PetConnect.API\\PetConnect.API.csproj|solutionrelative:petconnect.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Post.cs",
+              "DocumentMoniker": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetConnect\\PetConnect.Domain\\Post.cs",
+              "RelativeDocumentMoniker": "PetConnect.Domain\\Post.cs",
+              "ToolTip": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetConnect\\PetConnect.Domain\\Post.cs",
+              "RelativeToolTip": "PetConnect.Domain\\Post.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T09:49:45.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetConnect\\PetConnect.API\\Program.cs",
+              "RelativeDocumentMoniker": "PetConnect.API\\Program.cs",
+              "ToolTip": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetConnect\\PetConnect.API\\Program.cs",
+              "RelativeToolTip": "PetConnect.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T19:28:52.061Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oIyg46Rh5uwxCIWcnu8zg8LD7trtpDf7p6vYmc6PtBmrG5nzWXW6JGX7hs4f0gCBS9+zW3Qz/nRObPoEt3Mxtw==",
+  "success": true,
+  "projectFilePath": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetFamily\\Contracts\\Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\csharpfunctionalextensions\\2.42.5\\csharpfunctionalextensions.2.42.5.nupkg.sha512"
+  ],
+  "logs": []
+}

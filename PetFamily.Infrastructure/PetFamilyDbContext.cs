@@ -9,6 +9,10 @@ public class PetFamilyDbContext : DbContext
 {
     private readonly IConfiguration _configuration;
 
+    static PetFamilyDbContext()
+    {
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+    }
     public PetFamilyDbContext(IConfiguration configuration)
     {
         _configuration = configuration;

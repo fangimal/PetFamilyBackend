@@ -1,0 +1,15 @@
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\bin\Debug\net8.0\Contracts.deps.json
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\bin\Debug\net8.0\Contracts.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\bin\Debug\net8.0\Contracts.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\bin\Debug\net8.0\PetFamily.Domain.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\bin\Debug\net8.0\PetFamily.Domain.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.csproj.AssemblyReference.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.csproj.Up2Date
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\Contracts.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\Contracts\obj\Debug\net8.0\ref\Contracts.dll

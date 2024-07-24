@@ -1,15 +1,17 @@
-﻿using PetFamily.Domain.ValueObjects;
+﻿using CSharpFunctionalExtensions;
+using PetFamily.Domain.Common;
+using PetFamily.Domain.ValueObjects;
 
 namespace PetFamily.Domain.Entities;
 
 public class Pet
 {
-    public Pet() { }
+    private Pet() { }
     
-    public Pet(
+    private Pet(
         string nickname,
         string description,
-        DateTime birthDate,
+        // DateTimeOffset birthDate,
         string breed,
         string color,
         Address address,
@@ -25,11 +27,12 @@ public class Pet
         PhoneNumber contactPhoneNumber,
         PhoneNumber volunteerPhoneNumber,
         bool onTreatment,
-        DateTime createdDate)
+        DateTimeOffset createdDate
+)
     {
         Nickname = nickname;
         Description = description;
-        BirthDate = birthDate;
+        // BirthDate = birthDate;
         Breed = breed;
         Color = color;
         Address = address;
@@ -72,4 +75,82 @@ public class Pet
     public List<Vaccination> _vaccinations = [];
     public IReadOnlyList<Photo> Photos => _photos;
     private readonly List<Photo> _photos = [];
+
+    public static Result<Pet, Error> Create(
+        string nickname,
+        string description,
+        // DateTimeOffset birthDate,
+        string breed,
+        string color,
+        Address address,
+        Place place,
+        bool castration,
+        string peopleAttitude,
+        string animalAttitude,
+        bool onlyOneInFamily,
+        string health,
+        int? height,
+        Weight weight,
+        bool vaccine,   
+        PhoneNumber contactPhoneNumber,
+        PhoneNumber volunteerPhoneNumber,
+        bool onTreatment)
+    {
+        breed = breed.Trim();
+        color = color.Trim();
+        peopleAttitude = peopleAttitude.Trim();
+        animalAttitude = animalAttitude.Trim();
+
+        if (nickname.IsEmpty() || nickname.Length > Constraints.SHORT_TITLE_LENGTH)
+            return Errors.General.InvalidLength();
+
+        if (description.IsEmpty() || description.Length > Constraints.LONG_TITLE_LENGTH)
+            return Errors.General.InvalidLength();
+
+        // if (birthDate > DateTimeOffset.UtcNow)
+        //     return Errors.General.ValueIsInvalid(nameof(birthDate.Year));
+
+        if (breed.IsEmpty() || breed.Length > Constraints.SHORT_TITLE_LENGTH)
+            return Errors.General.InvalidLength();
+
+        if (color.IsEmpty() || color.Length > Constraints.SHORT_TITLE_LENGTH)
+            return Errors.General.InvalidLength();
+
+        if (peopleAttitude.IsEmpty() || peopleAttitude.Length > Constraints.LONG_TITLE_LENGTH)
+            return Errors.General.InvalidLength();
+
+        if (animalAttitude.IsEmpty() || animalAttitude.Length > Constraints.LONG_TITLE_LENGTH)
+            return Errors.General.InvalidLength();
+
+        if (health.IsEmpty() || health.Length > Constraints.LONG_TITLE_LENGTH)
+            return Errors.General.InvalidLength();
+
+        if (height <= 0)
+            return Errors.General.ValueIsInvalid(nameof(height));
+
+        // var photosList = photos.ToList();
+        // if (photosList.Count is > PHOTO_COUNT_LIMIT or < PHOTO_COUNT_MIN)
+        //     return Errors.Pets.PhotoCountLimit();
+
+        return new Pet(
+            nickname,
+            description,
+            // birthDate,
+            breed,
+            color,
+            address,
+            place,
+            castration,
+            peopleAttitude,
+            animalAttitude,
+            onlyOneInFamily,
+            health,
+            height,
+            weight,
+            vaccine,
+            contactPhoneNumber,
+            volunteerPhoneNumber,
+            onTreatment,
+            DateTimeOffset.UtcNow);
+    }
 }

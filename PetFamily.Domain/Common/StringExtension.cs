@@ -1,4 +1,4 @@
-﻿namespace PetFamily.Domain.ValueObjects;
+﻿namespace PetFamily.Domain.Common;
 
 public static class StringExtension
 {

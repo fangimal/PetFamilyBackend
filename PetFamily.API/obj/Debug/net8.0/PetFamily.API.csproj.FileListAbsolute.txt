@@ -108,3 +108,11 @@ D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\obj\Debug\net8.0\refint\Pet
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\obj\Debug\net8.0\PetFamily.API.pdb
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\obj\Debug\net8.0\PetFamily.API.genruntimeconfig.cache
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\obj\Debug\net8.0\ref\PetFamily.API.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Contracts.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\PetFamily.Application.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Contracts.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\PetFamily.Application.pdb
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\FluentValidation.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\SharpGrip.FluentValidation.AutoValidation.Mvc.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\SharpGrip.FluentValidation.AutoValidation.Shared.dll

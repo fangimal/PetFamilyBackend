@@ -1,31 +1,33 @@
-﻿namespace PetFamily.Domain.ValueObjects
+﻿using CSharpFunctionalExtensions;
+using PetFamily.Domain.Common;
+
+namespace PetFamily.Domain.ValueObjects;
+
+public record Place
 {
-    public record Place
+    public static readonly Place InHospital = new(nameof(InHospital).ToUpper());
+    public static readonly Place AtHome = new(nameof(AtHome).ToUpper());
+
+    private static readonly Place[] _all = [InHospital, AtHome];
+    public string Value { get; }
+
+    private Place(string value)
     {
-        public static readonly Place InHospital = new(nameof(InHospital).ToUpper());
-        public static readonly Place AtHome = new(nameof(AtHome).ToUpper());
+        Value = value;
+    }
 
-        private static readonly Place[] _all = [InHospital, AtHome];
-        public string Value { get; }
+    public static Result<Place, Error> Create(string input)
+    {
+        if (input.IsEmpty())
+            return Errors.General.ValueIsRequired("input");
 
-        private Place(string value)
+        var place = input.Trim().ToUpper();
+
+        if (_all.Any(p => p.Value == place) == false)
         {
-            Value = value;
+            return Errors.General.ValueIsInvalid("place");
         }
 
-        public static Place Create(string input)
-        {
-            if (input.IsEmpty())
-                throw new ArgumentNullException();
-
-            var place = input.Trim().ToUpper();
-
-            if (_all.Any(p => p.Value == input) == false)
-            {
-                throw new ArgumentException();
-            }
-
-            return new(place);
-        }
+        return new Place(place);
     }
 }

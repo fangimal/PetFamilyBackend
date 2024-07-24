@@ -1,32 +1,33 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PetFamily.API.Contracts;
-using PetFamily.Infrastructure;
+﻿using Contracts.Requests;
+using Microsoft.AspNetCore.Mvc;
+using PetFamily.Application;
 
 namespace PetFamily.API.Controllers;
 
-[ApiController]
 [Route("[controller]")]
-public class PetController : ControllerBase
+public class PetController : ApplicationController
 {
-    private readonly PetFamilyDbContext _dbContext;
-    
-    public PetController(PetFamilyDbContext dbContext)
+    private readonly PetsService _petsService;
+
+    public PetController(PetsService petsService)
     {
-        _dbContext = dbContext;
+        _petsService = petsService;
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(CreatePetRequest request, CancellationToken ct)
+    public async Task<IActionResult> Create([FromBody] CreatePetRequest request, CancellationToken ct)
     {
-
-        return Ok();
+        var idResult = await _petsService.CreatePet(request, ct);
+        if (idResult.IsFailure)
+        {
+            return BadRequest(idResult.Error);
+        }
+        return Ok(idResult.Value);
     }
-
+    
     [HttpGet]
-    public async Task<IActionResult> Get()
+    public IActionResult Get()
     {
-        var pets = await _dbContext.Pets.ToListAsync();
-        return Ok(pets);
+        return Ok();
     }
 }

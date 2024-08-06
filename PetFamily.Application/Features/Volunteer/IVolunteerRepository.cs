@@ -1,7 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
 using PetFamily.Domain.Common;
 
-namespace PetFamily.Application;
+namespace PetFamily.Application.Features.Volunteer;
 
 public interface IVolunteerRepository
 {

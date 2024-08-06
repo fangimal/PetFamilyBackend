@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace PetFamily.Application.Pets.GetPets;
+namespace PetFamily.Application.Features.Pets.GetPets;
 
 public record GetPetsRequest(
     string? Nickname,

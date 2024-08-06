@@ -13,8 +13,8 @@ using PetFamily.Infrastructure.DbContexts;
 namespace PetFamily.Infrastructure.Migrations
 {
     [DbContext(typeof(PetFamilyWriteDbContext))]
-    [Migration("20240805192635_AddVolunteerEntity")]
-    partial class AddVolunteerEntity
+    [Migration("20240806062742_RenameVaccination")]
+    partial class RenameVaccination
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -261,12 +261,12 @@ namespace PetFamily.Infrastructure.Migrations
                         .HasColumnName("pet_id");
 
                     b.HasKey("Id")
-                        .HasName("pk_vaccination");
+                        .HasName("pk_vaccinations");
 
                     b.HasIndex("PetId")
-                        .HasDatabaseName("ix_vaccination_pet_id");
+                        .HasDatabaseName("ix_vaccinations_pet_id");
 
-                    b.ToTable("vaccination", (string)null);
+                    b.ToTable("vaccinations", (string)null);
                 });
 
             modelBuilder.Entity("PetFamily.Domain.Entities.Volunteer", b =>
@@ -343,7 +343,7 @@ namespace PetFamily.Infrastructure.Migrations
                     b.HasOne("PetFamily.Domain.Entities.Pet", null)
                         .WithMany("Vaccinations")
                         .HasForeignKey("PetId")
-                        .HasConstraintName("fk_vaccination_pets_pet_id");
+                        .HasConstraintName("fk_vaccinations_pets_pet_id");
                 });
 
             modelBuilder.Entity("PetFamily.Domain.Entities.Pet", b =>

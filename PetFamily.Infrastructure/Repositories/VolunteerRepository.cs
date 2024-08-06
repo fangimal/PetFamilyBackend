@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
-using PetFamily.Application;
+using PetFamily.Application.Features.Volunteer;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
 using PetFamily.Infrastructure.DbContexts;
@@ -23,12 +23,13 @@ public class VolunteerRepository : IVolunteerRepository
 
     public async Task<Result<Guid, Error>> Save(Volunteer volunteer, CancellationToken ct)
     {
+        
         var result = await _dbContext.SaveChangesAsync(ct);
 
         if (result == 0)
             return Errors.General.CantSave("Volunteer");
 
-        return volunteer.Id;
+        return volunteer.Id; 
     }
 
     public async Task<Result<Volunteer, Error>> GetById(Guid id, CancellationToken ct)

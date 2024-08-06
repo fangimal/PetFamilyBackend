@@ -1,33 +1,34 @@
-﻿using PetFamily.Domain.Common;
-using System.Net;
+﻿using System.Net;
+using PetFamily.Domain.Common;
 
 namespace PetFamily.API.Middlewares;
 
-public class ExeptionMiddleware
+public class ExceptionMiddleware
 {
     private readonly RequestDelegate _next;
-    private readonly ILogger<ExeptionMiddleware> _logger;
+    private readonly ILogger<ExceptionMiddleware> _logger;
 
-    public ExeptionMiddleware(RequestDelegate next, ILogger<ExeptionMiddleware> logger)
+    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
     {
         _next = next;
         _logger = logger;
     }
-        
-    public async Task InvokeAsync(HttpContext httpContext)
+
+    public async Task InvokeAsync(HttpContext context)
     {
         try
         {
-            await _next(httpContext);
+            await _next(context);
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
-            _logger.LogError(e.Message);
-            var error = new Error("server.internal", e.Message);
-            httpContext.Response.ContentType = "application/json";
-            httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-            await httpContext.Response.WriteAsJsonAsync(error);
+            _logger.LogError(ex.Message);
+
+            var error = new Error("server.iternal", ex.Message);
+
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            await context.Response.WriteAsJsonAsync(error);
         }
-            
     }
 }

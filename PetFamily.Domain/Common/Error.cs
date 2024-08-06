@@ -45,10 +45,11 @@ public static class Errors
             var label = name == null ? " " : " " + name + " ";
             return new Error("invalid.string.lenght", $"Invalid{label}lenght");
         }
-    }
 
-    public static class Place
-    {
-        public static Error ValueIsInvalid() => new("place.is.invalid", "Place is invalid");
+        public static Error CantSave(string? name = null)
+        {
+            var label = name ?? "Value";
+            return new("record.cant.save", $"{label} can not be save");
+        }
     }
 }

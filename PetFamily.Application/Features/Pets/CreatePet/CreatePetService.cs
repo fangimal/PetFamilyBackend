@@ -1,21 +1,20 @@
-﻿using Contracts.Requests;
-using CSharpFunctionalExtensions;
+﻿using CSharpFunctionalExtensions;
 using PetFamily.Application.Abstractions;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
 using PetFamily.Domain.ValueObjects;
 
-namespace PetFamily.Application;
+namespace PetFamily.Application.Pets.CreatePet ;
 
-public class PetsService
+public class CreatePetService
 {
     private readonly IPetsRepository _petsRepository;
 
-    public PetsService(IPetsRepository petsRepository)
+    public CreatePetService(IPetsRepository petsRepository)
     {
         _petsRepository = petsRepository;
     }
-    public async Task<Result<Guid, Error>> CreatePet(CreatePetRequest request, CancellationToken ct)
+    public async Task<Result<Guid, Error>> Handle(CreatePetRequest request, CancellationToken ct)
     {
         var address = Address.Create(request.City, request.Street, request.Building, request.Index).Value;
         var place = Place.Create(request.Place).Value;
@@ -25,22 +24,15 @@ public class PetsService
 
         var pet = Pet.Create(
             request.Nickname,
-            request.Description,
-            // request.BirthDate,
-            request.Breed,
             request.Color,
             address,
             place,
-            request.Castration,
-            request.PeopleAttitude,
-            request.AnimalAttitude,
-            request.OnlyOneInFamily,
-            request.Health, request.Height,
             weight,
-            request.Vaccine,
+            false,
+            "fsdfsdf",
             contactPhoneNumber,
-            volunteerPhoneNumber, 
-            false);
+            volunteerPhoneNumber,
+            true);
 
         var idResult = await _petsRepository.Add(pet.Value, ct);
         if (idResult.IsFailure)

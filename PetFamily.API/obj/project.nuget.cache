@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0eBI7QaAAon9byc+nx9RmpgLsNKDBmnLNs9n2mjkdTSJRNaMZtr9pCHTbwBSah6fwEs51gScfbAceRvSm9F8eA==",
+  "dgSpecHash": "fUKcABoOj+VjTUb0PPNmr7DzgtEZDs+MCxOjhpzQDOoEToI5A7MgDZv5NYFZBVkiav32cS9tjcEMYNCL9C2MAA==",
   "success": true,
   "projectFilePath": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetFamily\\PetFamily.API\\PetFamily.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\csharpfunctionalextensions\\2.42.5\\csharpfunctionalextensions.2.42.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\efcore.namingconventions\\8.0.3\\efcore.namingconventions.8.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",

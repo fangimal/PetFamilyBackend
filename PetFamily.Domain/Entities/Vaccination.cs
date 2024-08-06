@@ -2,9 +2,9 @@
 {
     public class Vaccination
     {
-        public Vaccination() { }
+        private Vaccination() { }
         
-        public Vaccination(string name, DateTime applied)
+        public Vaccination(string name, DateTimeOffset applied)
         {
             Name = name;
             Applied = applied;
@@ -14,6 +14,6 @@
 
         public string Name { get; private set;}
         
-        public DateTime Applied { get; private set;}
+        public DateTimeOffset Applied { get; private set;}
     }
 }

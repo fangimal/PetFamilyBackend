@@ -2,7 +2,7 @@
 using FluentValidation;
 using PetFamily.Domain.Common;
 
-namespace PetFamily.Application.Validators;
+namespace PetFamily.Application.CommonValidators;
 
 public static class CustomValidators
 {

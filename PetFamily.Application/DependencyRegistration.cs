@@ -1,16 +1,22 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using PetFamily.Application.Pets.CreatePet;
 
-namespace PetFamily.Application
+namespace PetFamily.Application;
+
+public static class DependencyRegistration
 {
-    public static class DependencyRegistration
+    public static IServiceCollection  AddApplication(this IServiceCollection services)
     {
-        public static IServiceCollection AddApplication(this IServiceCollection services)
-        {
-            services.AddScoped<PetsService>();
-            services.AddValidatorsFromAssembly(typeof(DependencyRegistration).Assembly);
+        services.AddServices();
+        services.AddValidatorsFromAssembly(typeof(DependencyRegistration).Assembly);
+        return services;
+    }
 
-            return services;
-        }
+    private static IServiceCollection AddServices(this IServiceCollection services)
+    {
+        services.AddScoped<CreatePetService>();
+        services.AddScoped<CreatePetService>();
+        return services;
     }
 }

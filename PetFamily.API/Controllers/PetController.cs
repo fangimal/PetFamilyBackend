@@ -1,33 +1,46 @@
-﻿using Contracts.Requests;
-using Microsoft.AspNetCore.Mvc;
-using PetFamily.Application;
+﻿using Microsoft.AspNetCore.Mvc;
+using PetFamily.Application.Pets.CreatePet;
+using PetFamily.Application.Pets.GetPets;
+using PetFamily.Infrastructure.Queries.Pets;
 
 namespace PetFamily.API.Controllers;
 
 [Route("[controller]")]
 public class PetController : ApplicationController
 {
-    private readonly PetsService _petsService;
-
-    public PetController(PetsService petsService)
-    {
-        _petsService = petsService;
-    }
-
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreatePetRequest request, CancellationToken ct)
+    public async Task<IActionResult> Create(
+        [FromServices] CreatePetService sercvice,
+        [FromBody] CreatePetRequest request,
+        CancellationToken ct)
     {
-        var idResult = await _petsService.CreatePet(request, ct);
+        var idResult = await sercvice.Handle(request, ct);
+
         if (idResult.IsFailure)
-        {
             return BadRequest(idResult.Error);
-        }
+
         return Ok(idResult.Value);
     }
-    
-    [HttpGet]
-    public IActionResult Get()
+
+    [HttpGet("ef-core")]
+    public async Task<IActionResult> Get(
+        [FromServices] GetPetsQuery query,
+        [FromQuery] GetPetsRequest request,
+        CancellationToken ct)
     {
-        return Ok();
+        var response = await query.Handle(request, ct);
+
+        return Ok(response);
+    }
+    
+    [HttpGet("dapper")]
+    public async Task<IActionResult> Get(
+        [FromServices] GetAllPetsQuery query,
+        [FromQuery] GetPetsRequest request,
+        CancellationToken ct)
+    {
+        var response = await query.Handle();
+
+        return Ok(response);
     }
 }

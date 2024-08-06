@@ -1,39 +1,36 @@
-using FluentValidation;
 using PetFamily.API.Middlewares;
+using PetFamily.API.Validation;
 using PetFamily.Application;
 using PetFamily.Application.Abstractions;
 using PetFamily.Infrastructure;
+using PetFamily.Infrastructure.DbContexts;
 using PetFamily.Infrastructure.Repositories;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
-using DependencyRegistration = PetFamily.API.Validation.DependencyRegistration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
-builder.Services.AddApplication();
-
-builder.Services.AddScoped<IPetsRepository, PetRepository>();
-
-builder.Services.AddScoped<PetFamilyDbContext>();
+builder.Services
+    .AddApplication()
+    .AddInfrastructure();
 
 builder.Services.AddFluentValidationAutoValidation(configuration =>
 {
-    configuration.OverrideDefaultResultFactoryWith<DependencyRegistration.CustomResultFactory>();
+    configuration.OverrideDefaultResultFactoryWith<CustomResultFactory>();
 });
 
-builder.Services.AddHttpLogging(options =>{});
+builder.Services.AddHttpLogging(options => { });
+
 var app = builder.Build();
 
-app.UseMiddleware<ExeptionMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpLogging();
-
-//app.UseExceptionHandler();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
 app.MapControllers();
 
- app.Run();
+app.Run();

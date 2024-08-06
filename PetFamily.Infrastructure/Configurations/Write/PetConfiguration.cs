@@ -2,12 +2,14 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PetFamily.Domain.Entities;
 
-namespace PetFamily.Infrastructure.Configurations;
+namespace PetFamily.Infrastructure.Configurations.Write;
 
 public class PetConfiguration : IEntityTypeConfiguration<Pet>
 {
     public void Configure(EntityTypeBuilder<Pet> builder)
     {
+        builder.ToTable("pets");                         
+        
         builder.HasKey(p => p.Id);
         builder.Property(p => p.Nickname).IsRequired();
         builder.Property(p => p.Description).IsRequired();
@@ -20,7 +22,6 @@ public class PetConfiguration : IEntityTypeConfiguration<Pet>
         builder.Property(p => p.OnlyOneInFamily).IsRequired();
         builder.Property(p => p.Health).IsRequired();
         builder.Property(p => p.Height).IsRequired(false);
-        builder.Property(p => p.Vaccine).IsRequired();
         builder.Property(p => p.OnTreatment).IsRequired();
         builder.Property(p => p.CreatedDate).IsRequired();
         
@@ -36,7 +37,7 @@ public class PetConfiguration : IEntityTypeConfiguration<Pet>
             b => b.Property(a => a.Value).HasColumnName("place"));
         
         builder.ComplexProperty(p => p.Weight, 
-            b => b.Property(a => a.Kilograms).HasColumnName("grams"));
+            b => b.Property(a => a.Kilograms).HasColumnName("weight"));
         
         builder.ComplexProperty(p => p.ContactPhoneNumber, 
             b => b.Property(a => a.Number).HasColumnName("contact_phone_number"));

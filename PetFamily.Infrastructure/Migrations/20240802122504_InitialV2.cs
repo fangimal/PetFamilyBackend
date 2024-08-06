@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PetFamily.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialV2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,14 +18,13 @@ namespace PetFamily.Infrastructure.Migrations
                     id = table.Column<Guid>(type: "uuid", nullable: false),
                     nickname = table.Column<string>(type: "text", nullable: false),
                     description = table.Column<string>(type: "text", nullable: false),
-                    people_attitude = table.Column<string>(type: "text", nullable: false),
-                    animal_attitude = table.Column<string>(type: "text", nullable: false),
                     breed = table.Column<string>(type: "text", nullable: false),
                     color = table.Column<string>(type: "text", nullable: false),
+                    people_attitude = table.Column<string>(type: "text", nullable: false),
+                    animal_attitude = table.Column<string>(type: "text", nullable: false),
                     health = table.Column<string>(type: "text", nullable: false),
                     castration = table.Column<bool>(type: "boolean", nullable: false),
                     only_one_in_family = table.Column<bool>(type: "boolean", nullable: false),
-                    vaccine = table.Column<bool>(type: "boolean", nullable: false),
                     on_treatment = table.Column<bool>(type: "boolean", nullable: false),
                     height = table.Column<int>(type: "integer", nullable: true),
                     birth_date = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
@@ -37,7 +36,7 @@ namespace PetFamily.Infrastructure.Migrations
                     contact_phone_number = table.Column<string>(type: "text", nullable: false),
                     place = table.Column<string>(type: "text", nullable: false),
                     volunteer_phone_number = table.Column<string>(type: "text", nullable: false),
-                    grams = table.Column<float>(type: "real", nullable: false)
+                    weight = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,7 +44,7 @@ namespace PetFamily.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "photo",
+                name: "photos",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -55,9 +54,9 @@ namespace PetFamily.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("pk_photo", x => x.id);
+                    table.PrimaryKey("pk_photos", x => x.id);
                     table.ForeignKey(
-                        name: "fk_photo_pets_pet_id",
+                        name: "fk_photos_pets_pet_id",
                         column: x => x.pet_id,
                         principalTable: "pets",
                         principalColumn: "id");
@@ -83,8 +82,8 @@ namespace PetFamily.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "ix_photo_pet_id",
-                table: "photo",
+                name: "ix_photos_pet_id",
+                table: "photos",
                 column: "pet_id");
 
             migrationBuilder.CreateIndex(
@@ -97,7 +96,7 @@ namespace PetFamily.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "photo");
+                name: "photos");
 
             migrationBuilder.DropTable(
                 name: "vaccination");

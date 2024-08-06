@@ -6,15 +6,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using PetFamily.Infrastructure;
+using PetFamily.Infrastructure.DbContexts;
 
 #nullable disable
 
 namespace PetFamily.Infrastructure.Migrations
 {
-    [DbContext(typeof(PetFamilyDbContext))]
-    [Migration("20240708183123_Initial")]
-    partial class Initial
+    [DbContext(typeof(PetFamilyWriteDbContext))]
+    [Migration("20240805192635_AddVolunteerEntity")]
+    partial class AddVolunteerEntity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,9 +92,9 @@ namespace PetFamily.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("people_attitude");
 
-                    b.Property<bool>("Vaccine")
-                        .HasColumnType("boolean")
-                        .HasColumnName("vaccine");
+                    b.Property<Guid?>("VolunteerId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("volunteer_id");
 
                     b.ComplexProperty<Dictionary<string, object>>("Address", "PetFamily.Domain.Entities.Pet.Address#Address", b1 =>
                         {
@@ -157,11 +157,14 @@ namespace PetFamily.Infrastructure.Migrations
 
                             b1.Property<float>("Kilograms")
                                 .HasColumnType("real")
-                                .HasColumnName("grams");
+                                .HasColumnName("weight");
                         });
 
                     b.HasKey("Id")
                         .HasName("pk_pets");
+
+                    b.HasIndex("VolunteerId")
+                        .HasDatabaseName("ix_pets_volunteer_id");
 
                     b.ToTable("pets", (string)null);
                 });
@@ -186,13 +189,55 @@ namespace PetFamily.Infrastructure.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("pet_id");
 
+                    b.Property<Guid?>("VolunteerId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("volunteer_id");
+
                     b.HasKey("Id")
-                        .HasName("pk_photo");
+                        .HasName("pk_photos");
 
                     b.HasIndex("PetId")
-                        .HasDatabaseName("ix_photo_pet_id");
+                        .HasDatabaseName("ix_photos_pet_id");
 
-                    b.ToTable("photo", (string)null);
+                    b.HasIndex("VolunteerId")
+                        .HasDatabaseName("ix_photos_volunteer_id");
+
+                    b.ToTable("photos", (string)null);
+                });
+
+            modelBuilder.Entity("PetFamily.Domain.Entities.SocialMedia", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("link");
+
+                    b.Property<Guid?>("VolunteerId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("volunteer_id");
+
+                    b.ComplexProperty<Dictionary<string, object>>("Social", "PetFamily.Domain.Entities.SocialMedia.Social#Social", b1 =>
+                        {
+                            b1.IsRequired();
+
+                            b1.Property<string>("Value")
+                                .IsRequired()
+                                .HasColumnType("text")
+                                .HasColumnName("social");
+                        });
+
+                    b.HasKey("Id")
+                        .HasName("pk_social_medias");
+
+                    b.HasIndex("VolunteerId")
+                        .HasDatabaseName("ix_social_medias_volunteer_id");
+
+                    b.ToTable("social_medias", (string)null);
                 });
 
             modelBuilder.Entity("PetFamily.Domain.Entities.Vaccination", b =>
@@ -202,7 +247,7 @@ namespace PetFamily.Infrastructure.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("id");
 
-                    b.Property<DateTime>("Applied")
+                    b.Property<DateTimeOffset>("Applied")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("applied");
 
@@ -224,12 +269,73 @@ namespace PetFamily.Infrastructure.Migrations
                     b.ToTable("vaccination", (string)null);
                 });
 
+            modelBuilder.Entity("PetFamily.Domain.Entities.Volunteer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("description");
+
+                    b.Property<string>("DonationInfo")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("donation_info");
+
+                    b.Property<bool>("FromShelter")
+                        .HasColumnType("boolean")
+                        .HasColumnName("from_shelter");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.Property<int>("NumberOfPetsFoundHome")
+                        .HasColumnType("integer")
+                        .HasColumnName("number_of_pets_found_home");
+
+                    b.Property<int>("YearsExperience")
+                        .HasColumnType("integer")
+                        .HasColumnName("years_experience");
+
+                    b.HasKey("Id")
+                        .HasName("pk_volunteers");
+
+                    b.ToTable("volunteers", (string)null);
+                });
+
+            modelBuilder.Entity("PetFamily.Domain.Entities.Pet", b =>
+                {
+                    b.HasOne("PetFamily.Domain.Entities.Volunteer", null)
+                        .WithMany("Pets")
+                        .HasForeignKey("VolunteerId")
+                        .HasConstraintName("fk_pets_volunteers_volunteer_id");
+                });
+
             modelBuilder.Entity("PetFamily.Domain.Entities.Photo", b =>
                 {
                     b.HasOne("PetFamily.Domain.Entities.Pet", null)
                         .WithMany("Photos")
                         .HasForeignKey("PetId")
-                        .HasConstraintName("fk_photo_pets_pet_id");
+                        .HasConstraintName("fk_photos_pets_pet_id");
+
+                    b.HasOne("PetFamily.Domain.Entities.Volunteer", null)
+                        .WithMany("Photos")
+                        .HasForeignKey("VolunteerId")
+                        .HasConstraintName("fk_photos_volunteers_volunteer_id");
+                });
+
+            modelBuilder.Entity("PetFamily.Domain.Entities.SocialMedia", b =>
+                {
+                    b.HasOne("PetFamily.Domain.Entities.Volunteer", null)
+                        .WithMany("SocialMedias")
+                        .HasForeignKey("VolunteerId")
+                        .HasConstraintName("fk_social_medias_volunteers_volunteer_id");
                 });
 
             modelBuilder.Entity("PetFamily.Domain.Entities.Vaccination", b =>
@@ -245,6 +351,15 @@ namespace PetFamily.Infrastructure.Migrations
                     b.Navigation("Photos");
 
                     b.Navigation("Vaccinations");
+                });
+
+            modelBuilder.Entity("PetFamily.Domain.Entities.Volunteer", b =>
+                {
+                    b.Navigation("Pets");
+
+                    b.Navigation("Photos");
+
+                    b.Navigation("SocialMedias");
                 });
 #pragma warning restore 612, 618
         }

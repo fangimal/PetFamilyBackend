@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.Infrastructure", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.Application", "PetFamily.Application\PetFamily.Application.csproj", "{EB9B9158-2D42-4790-A032-93DBECEFD8FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{AC29AAD5-4FDE-4D76-AA98-81B725385F02}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{EB9B9158-2D42-4790-A032-93DBECEFD8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB9B9158-2D42-4790-A032-93DBECEFD8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB9B9158-2D42-4790-A032-93DBECEFD8FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC29AAD5-4FDE-4D76-AA98-81B725385F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC29AAD5-4FDE-4D76-AA98-81B725385F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC29AAD5-4FDE-4D76-AA98-81B725385F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC29AAD5-4FDE-4D76-AA98-81B725385F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

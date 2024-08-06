@@ -2,7 +2,7 @@
 using PetFamily.API.Validation;
 using PetFamily.Domain.Common;
 
-namespace PetFamily.API
+namespace PetFamily.API.Controllers
 {
     [ApiController]
     public class ApplicationController : ControllerBase

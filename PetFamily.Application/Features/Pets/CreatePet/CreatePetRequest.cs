@@ -24,7 +24,7 @@ public class CreatePetRequestValidator : AbstractValidator<CreatePetRequest>
 {
     public CreatePetRequestValidator()
     {
-        //TODO написать валидацию для всех свойств
+
         RuleFor(x => x.ContactPhoneNumber).MustBeValueObject(PhoneNumber.Create);
         RuleFor(x => x.VolunteerPhoneNumber).MustBeValueObject(PhoneNumber.Create);
         RuleFor(x => x.Weight).MustBeValueObject(Weight.Create);

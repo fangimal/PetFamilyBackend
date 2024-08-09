@@ -1,18 +1,17 @@
 ﻿using CSharpFunctionalExtensions;
-using Microsoft.AspNetCore.Mvc;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
 using PetFamily.Domain.ValueObjects;
 
 namespace PetFamily.Application.Features.Volunteer.CreateVolunteer;
 
-public class CreateVolunteerService
+public class CreateVolunteerHandler
 {
-    private readonly IVolunteerRepository _volunteerRepository;
+    private readonly IVolunteersRepository _volunteersRepository;
 
-    public CreateVolunteerService(IVolunteerRepository volunteerRepository)
+    public CreateVolunteerHandler(IVolunteersRepository volunteersRepository)
     {
-        _volunteerRepository = volunteerRepository;
+        _volunteersRepository = volunteersRepository;
     }
     public async Task<Result<Guid, Error>> Handle(CreateVolunteerRequest request, CancellationToken ct)
     {
@@ -31,7 +30,7 @@ public class CreateVolunteerService
             request.FromShelter,
             socialMedia);
         
-        await _volunteerRepository.Add(volunteer, ct);
-        return await _volunteerRepository.Save(volunteer, ct);
+        await _volunteersRepository.Add(volunteer, ct);
+        return await _volunteersRepository.Save(volunteer, ct);
     }
 }

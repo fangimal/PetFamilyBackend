@@ -1,31 +1,41 @@
 ﻿using PetFamily.Domain.Common;
 
-namespace PetFamily.API.Validation
-{
-    public class Envelope
-    {
-        public object? Result { get; }
-        public string? ErrorCode { get; }
-        public string? ErrorMessage { get; }
-        public DateTime TimeGenerated { get; }
+namespace PetFamily.API.Contracts;
 
-        private Envelope(object? result, Error? error)
-        {
-            Result = result;
-            ErrorCode = error?.Code;
-            ErrorMessage = error?.Message;
-            TimeGenerated = DateTime.UtcNow;
-        }
-        
-        public static Envelope Ok(object? result = null)
-        {
-            return new(result, null);
-        }
-        
-        public static Envelope Error(Error? error)
-        {
-            return new(null, error);
-        }
-        
+public class Envelope
+{
+    public object? Result { get; }
+    public List<ErrorInfo>? ErrorInfo { get; }
+    public DateTime TimeGenerated { get; }
+
+    private Envelope(object? result, List<ErrorInfo>? errors)
+    {
+        Result = result;
+        ErrorInfo = errors;
+        TimeGenerated = DateTime.Now;
+    }
+
+    public static Envelope Ok(object? result = null)
+    {
+        return new(result, null);
+    }
+
+    public static Envelope Error(List<ErrorInfo>? errors)
+    {
+        return new(null, errors);
     }
 }
+
+public class ErrorInfo
+{
+    public string? ErrorCode { get; }
+    public string? ErrorMessage { get; }
+    public string? InvalidField { get; }
+
+    public ErrorInfo(Error? error, string? invalidField = null)
+    {
+        ErrorCode = error?.Code;
+        ErrorMessage = error?.Message;
+        InvalidField = invalidField;
+    }
+} 

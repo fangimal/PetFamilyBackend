@@ -7,11 +7,11 @@ using PetFamily.Infrastructure.DbContexts;
 
 namespace PetFamily.Infrastructure.Repositories;
 
-public class VolunteerRepository : IVolunteerRepository
+public class VolunteersRepository : IVolunteersRepository
 {
     private readonly PetFamilyWriteDbContext _dbContext;
 
-    public VolunteerRepository(PetFamilyWriteDbContext dbContext)
+    public VolunteersRepository(PetFamilyWriteDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -23,13 +23,12 @@ public class VolunteerRepository : IVolunteerRepository
 
     public async Task<Result<Guid, Error>> Save(Volunteer volunteer, CancellationToken ct)
     {
-        
         var result = await _dbContext.SaveChangesAsync(ct);
 
         if (result == 0)
-            return Errors.General.CantSave("Volunteer");
+            return Errors.General.SaveFailure("Volunteer");
 
-        return volunteer.Id; 
+        return volunteer.Id;
     }
 
     public async Task<Result<Volunteer, Error>> GetById(Guid id, CancellationToken ct)

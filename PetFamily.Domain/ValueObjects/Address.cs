@@ -1,44 +1,43 @@
 ﻿using CSharpFunctionalExtensions;
 using PetFamily.Domain.Common;
 
-namespace PetFamily.Domain.ValueObjects
-{
-    public record Address
-    {
-        private Address(string city, string street, string building, string index)
-        {
-            City = city;
-            Street = street;
-            Building = building;
-            Index = index;
-        }
+namespace PetFamily.Domain.ValueObjects;
 
-        public string City { get; }
-        public string Street { get; }
-        public string Building { get; }
-        public string Index { get; }
-        
-        public static Result<Address, Error> Create(string city, string street, string building, string index)
-        {
-            city = city.Trim();
-            street = street.Trim();
-            building = building.Trim();
-            index = index.Trim();
-            
-            if (city.Length is < 1 or > 100)
-                return Errors.General.InvalidLength("city");
-            
-            if (street.Length is < 1 or > 100)
-                return Errors.General.InvalidLength("street");
-            
-            if (building.Length is < 1 or > 100)
-                return Errors.General.InvalidLength("building");
-            
-            if (index.Length != 6)
-                return Errors.General.InvalidLength("index");
-            
-            
-            return new Address(city, street, building, index);
-        }
+public record Address
+{
+    public const int INDEX_TITLE_LENGTH = 6;
+    private Address(string city, string street, string building, string index)
+    {
+        City = city;
+        Street = street;
+        Building = building;
+        Index = index;
+    }
+
+    public string City { get; }
+    public string Street { get; }
+    public string Building { get; }
+    public string Index { get; }
+
+    public static Result<Address, Error> Create(string city, string street, string building, string index)
+    {
+        city = city.Trim();
+        street = street.Trim();
+        building = building.Trim();
+        index = index.Trim();
+
+        if (city.Length is < Constraints.MINIMUM_TITLE_LENGTH or > Constraints.SHORT_TITLE_LENGTH)
+            return Errors.General.InvalidLength(nameof(city));
+
+        if (street.Length is < Constraints.MINIMUM_TITLE_LENGTH or > Constraints.MEDIUM_TITLE_LENGTH)
+            return Errors.General.InvalidLength(nameof(street));
+
+        if (building.Length is < Constraints.MINIMUM_TITLE_LENGTH or > Constraints.SHORT_TITLE_LENGTH)
+            return Errors.General.InvalidLength(nameof(building));
+
+        if (index.Length != INDEX_TITLE_LENGTH)
+            return Errors.General.InvalidLength(nameof(index));
+
+        return new Address(city, street, building, index);
     }
 }

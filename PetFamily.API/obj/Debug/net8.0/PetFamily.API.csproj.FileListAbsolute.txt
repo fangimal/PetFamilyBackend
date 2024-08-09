@@ -115,3 +115,8 @@ D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\FluentVali
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\SharpGrip.FluentValidation.AutoValidation.Mvc.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\SharpGrip.FluentValidation.AutoValidation.Shared.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Dapper.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\CommunityToolkit.HighPerformance.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Minio.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.IO.Hashing.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.Reactive.dll

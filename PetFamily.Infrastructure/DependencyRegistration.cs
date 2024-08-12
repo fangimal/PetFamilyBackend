@@ -1,12 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Minio;
+using PetFamily.Application.Abstractions;
 using PetFamily.Application.Features.Pets;
 using PetFamily.Application.Features.Volunteer;
 using PetFamily.Infrastructure.DbContexts;
 using PetFamily.Infrastructure.Options;
 using PetFamily.Infrastructure.Queries.Pets;
 using PetFamily.Infrastructure.Repositories;
+using PetFamily.Infrastructure.Services;
 
 namespace PetFamily.Infrastructure;
 
@@ -18,7 +20,8 @@ public static class DependencyRegistration
         services
             .AddDataStorages(configuration)
             .AddRepositories()
-            .AddQueries();
+            .AddQueries()
+            .AddProviders();
 
         return services;
     }
@@ -28,6 +31,12 @@ public static class DependencyRegistration
         services.AddScoped<IPetsRepository, PetsRepository>();
         services.AddScoped<IVolunteersRepository, VolunteersRepository>();
         
+        return services;
+    }
+    
+    private static IServiceCollection AddProviders(this IServiceCollection services)
+    {
+        services.AddScoped<IMinioProvider, MinioProvider>();
         return services;
     }
 
@@ -44,6 +53,8 @@ public static class DependencyRegistration
         services.AddScoped<PetFamilyWriteDbContext>();
         services.AddScoped<PetFamilyReadDbContext>();
         services.AddSingleton<SqlConnectionFactory>();
+
+        services.AddScoped<IPetFamilyWriteDbContext, PetFamilyWriteDbContext>();
 
         services.AddMinio(options =>
         {

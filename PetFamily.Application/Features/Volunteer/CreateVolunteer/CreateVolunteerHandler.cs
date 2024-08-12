@@ -1,9 +1,12 @@
 ﻿using CSharpFunctionalExtensions;
+using PetFamily.Application.Features.Volunteer;
+using PetFamily.Application.Features.Volunteer.CreateVolunteer;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
 using PetFamily.Domain.ValueObjects;
 
-namespace PetFamily.Application.Features.Volunteer.CreateVolunteer;
+
+namespace PetFamily.Application.Features.Volunteers.CreateVolunteer;
 
 public class CreateVolunteerHandler
 {
@@ -13,14 +16,17 @@ public class CreateVolunteerHandler
     {
         _volunteersRepository = volunteersRepository;
     }
+
     public async Task<Result<Guid, Error>> Handle(CreateVolunteerRequest request, CancellationToken ct)
     {
-        var socialMedia = request.SocialMedias
+        //TODO
+        var socialMedias = request.SocialMedias?
             .Select(s =>
             {
                 var social = Social.Create(s.Social).Value;
                 return new SocialMedia(s.Link, social);
-            });
+            }) ?? [];
+
         var volunteer = new Domain.Entities.Volunteer(
             request.Name,
             request.Description,
@@ -28,9 +34,11 @@ public class CreateVolunteerHandler
             request.NumberOfPetsFoundHome,
             request.DonationInfo,
             request.FromShelter,
-            socialMedia);
-        
+            socialMedias);
+
         await _volunteersRepository.Add(volunteer, ct);
-        return await _volunteersRepository.Save(volunteer, ct);
+        await _volunteersRepository.Save(ct);
+
+        return volunteer.Id;
     }
 }

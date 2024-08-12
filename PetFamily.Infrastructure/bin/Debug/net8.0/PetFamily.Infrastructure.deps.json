@@ -615,6 +615,7 @@
       "PetFamily.Application/1.0.0": {
         "dependencies": {
           "FluentValidation.DependencyInjectionExtensions": "11.9.2",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
           "PetFamily.Domain": "1.0.0",
           "SharpGrip.FluentValidation.AutoValidation.Mvc": "1.4.0"
         },

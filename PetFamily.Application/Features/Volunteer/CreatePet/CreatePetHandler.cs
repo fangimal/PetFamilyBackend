@@ -6,7 +6,7 @@ using PetFamily.Domain.ValueObjects;
 
 namespace PetFamily.Application.Features.Volunteer.CreatePet ;
 
-public class CreatePetHandler
+public class CreatePetHandler 
 {
     private readonly IPetsRepository _petsRepository;
     private readonly IVolunteersRepository _volunteersRepository;
@@ -49,7 +49,9 @@ public class CreatePetHandler
         
         //добавить питомца волонтеру
         volunteer.Value.PublishPet(pet.Value);
-        
-        return await _volunteersRepository.Save(volunteer.Value, ct);
+
+        await _volunteersRepository.Save(ct);
+
+        return volunteer.Value.Id;
     }
 }

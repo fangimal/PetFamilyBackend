@@ -1,7 +1,8 @@
-﻿using PetFamily.Domain.ValueObjects;
+﻿using PetFamily.Domain.Common;
+using PetFamily.Domain.ValueObjects;
 
 namespace PetFamily.Domain.Entities;
-public class SocialMedia
+public class SocialMedia: Entity
 {
     private SocialMedia()
     {

@@ -1,19 +1,26 @@
-﻿namespace PetFamily.Domain.Entities;
+﻿using CSharpFunctionalExtensions;
+using PetFamily.Domain.Common;
+using Entity = PetFamily.Domain.Common.Entity;
 
-public class Photo
+namespace PetFamily.Domain.Entities;
+
+public class Photo : Entity
 {
     private Photo()
     {
     }
 
-    public Photo(Guid id, string path, bool isMain)
+    private Photo(string path, bool isMain)
     {
-        Id = id;
         Path = path;
         IsMain = isMain;
     }
 
-    public Guid Id { get; private set; }
     public string Path { get; private set; }
     public bool IsMain { get; private set; }
+
+    public static Result<Photo, Error> CreateAndActivate(string path)
+    {
+        return new Photo(path, true);
+    }
 }

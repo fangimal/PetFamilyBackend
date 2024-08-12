@@ -8,10 +8,10 @@ public class Envelope
     public List<ErrorInfo>? ErrorInfo { get; }
     public DateTime TimeGenerated { get; }
 
-    private Envelope(object? result, List<ErrorInfo>? errors)
+    private Envelope(object? result, IEnumerable<ErrorInfo>? errors)
     {
         Result = result;
-        ErrorInfo = errors;
+        ErrorInfo = errors?.ToList();
         TimeGenerated = DateTime.Now;
     }
 
@@ -23,6 +23,12 @@ public class Envelope
     public static Envelope Error(List<ErrorInfo>? errors)
     {
         return new(null, errors);
+    }
+
+    public static Envelope Error(List<Error>? errors)
+    {
+        var errorInfos = errors?.Select(e => new ErrorInfo(e));
+        return new(null, errorInfos);
     }
 }
 

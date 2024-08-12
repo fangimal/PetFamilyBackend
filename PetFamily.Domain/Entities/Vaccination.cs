@@ -1,6 +1,8 @@
-﻿namespace PetFamily.Domain.Entities
+﻿using PetFamily.Domain.Common;
+
+namespace PetFamily.Domain.Entities
 {
-    public class Vaccination
+    public class Vaccination : Entity
     {
         private Vaccination() { }
         

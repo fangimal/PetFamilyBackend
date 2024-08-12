@@ -1,4 +1,5 @@
-﻿using PetFamily.Domain.ValueObjects;
+﻿using PetFamily.Domain.Common;
+using PetFamily.Domain.ValueObjects;
 
 namespace PetFamily.Domain.Entities
 {

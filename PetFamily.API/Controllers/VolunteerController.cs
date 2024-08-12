@@ -4,6 +4,7 @@ using Minio.DataModel.Args;
 using PetFamily.Application.Features.Volunteer.CreatePet;
 using PetFamily.Application.Features.Volunteer.CreateVolunteer;
 using PetFamily.Application.Features.Volunteer.UploadPhoto;
+using PetFamily.Application.Features.Volunteers.CreateVolunteer;
 
 namespace PetFamily.API.Controllers;
 
@@ -38,12 +39,18 @@ public class VolunteerController : ApplicationController
         return Ok(idResult.Value);
     }
 
-    // [HttpPost("photo")]
-    // public async Task<IActionResult> UploadPhoto(
-    //     [FromForm] UploadVolunteerPhotoRequest request )
-    // {
-    //     
-    // }
+    [HttpPost("photo")]
+    public async Task<IActionResult> UploadPhoto(
+        [FromServices] UploadVolunteerPhotoHandler handler,
+        [FromForm] UploadVolunteerPhotoRequest request,
+        CancellationToken ct)
+    {
+        var result = await handler.Handle(request, ct);
+        if (result.IsFailure)
+            return BadRequest(result.Error);
+
+        return Ok(result.Value);
+    }
 
     [HttpGet("photo")]
     public async Task<IActionResult> GetPhoto(

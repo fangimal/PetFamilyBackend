@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using PetFamily.Application.Features.Volunteer.CreatePet;
 using PetFamily.Application.Features.Volunteer.CreateVolunteer;
+using PetFamily.Application.Features.Volunteer.DeletePhoto;
 using PetFamily.Application.Features.Volunteer.UploadPhoto;
-using PetFamily.Application.Features.Volunteers.CreateVolunteer;
 
 namespace PetFamily.Application;
 
@@ -21,6 +21,7 @@ public static class DependencyRegistration
         services.AddScoped<CreatePetHandler>();
         services.AddScoped<CreateVolunteerHandler>();
         services.AddScoped<UploadVolunteerPhotoHandler>();
+        services.AddScoped<DeleteVolunteerPhotoHandler>();
         return services;
     }
 }

@@ -4,11 +4,11 @@ using PetFamily.Domain.Entities;
 
 namespace PetFamily.Infrastructure.Configurations.Write;
 
-public class PhotoConfiguration : IEntityTypeConfiguration<Photo>
+public class VolunteerPhotoConfiguration : IEntityTypeConfiguration<VolunteerPhoto>
 {
-    public void Configure(EntityTypeBuilder<Photo> builder)
+    public void Configure(EntityTypeBuilder<VolunteerPhoto> builder)
     {
-        builder.ToTable("photos");
+        builder.ToTable("volunteer_photos");
 
         builder.HasKey(p => p.Id);
     }

@@ -8,12 +8,10 @@ namespace PetFamily.Application.Features.Volunteer.CreatePet ;
 
 public class CreatePetHandler 
 {
-    private readonly IPetsRepository _petsRepository;
     private readonly IVolunteersRepository _volunteersRepository;
 
-    public CreatePetHandler(IPetsRepository petsRepository, IVolunteersRepository volunteersRepository)
+    public CreatePetHandler(IVolunteersRepository volunteersRepository)
     {
-        _petsRepository = petsRepository;
         _volunteersRepository = volunteersRepository;
     }
     public async Task<Result<Guid, Error>> Handle(CreatePetRequest request, CancellationToken ct)

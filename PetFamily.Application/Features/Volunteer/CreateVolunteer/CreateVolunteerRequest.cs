@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Http;
+using PetFamily.Application.Dtos;
 
 namespace PetFamily.Application.Features.Volunteer.CreateVolunteer;
 
@@ -9,4 +9,4 @@ public record CreateVolunteerRequest(
     int NumberOfPetsFoundHome,
     string DonationInfo,
     bool FromShelter,
-    List<CreateSocialRequest> SocialMedias);
+    List<SocialMediaDto>? SocialMedias);

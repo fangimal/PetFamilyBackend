@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Minio;
 using PetFamily.Application.Abstractions;
-using PetFamily.Application.Features.Pets;
-using PetFamily.Application.Features.Volunteer;
+using PetFamily.Application.DataAccess;
+using PetFamily.Application.Features.Volunteers;
 using PetFamily.Infrastructure.DbContexts;
 using PetFamily.Infrastructure.Options;
 using PetFamily.Infrastructure.Providers;
@@ -30,9 +30,10 @@ public static class DependencyRegistration
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
         services.AddScoped<IVolunteersRepository, VolunteersRepository>();
+
         return services;
     }
-    
+
     private static IServiceCollection AddProviders(this IServiceCollection services)
     {
         services.AddScoped<IMinioProvider, MinioProvider>();
@@ -44,27 +45,28 @@ public static class DependencyRegistration
         services.AddScoped<GetPetsQuery>();
         services.AddScoped<GetAllPetsQuery>();
         services.AddScoped<GetVolunteerByIdQuery>();
+
         return services;
     }
 
     private static IServiceCollection AddDataStorages(
         this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddScoped<IPetFamilyWriteDbContext, PetFamilyWriteDbContext>();
         services.AddScoped<PetFamilyWriteDbContext>();
         services.AddScoped<PetFamilyReadDbContext>();
         services.AddSingleton<SqlConnectionFactory>();
 
-        services.AddScoped<IPetFamilyWriteDbContext, PetFamilyWriteDbContext>();
-
         services.AddMinio(options =>
         {
-            var minioOptionns = configuration.GetSection(MinioOptions.Minio)
-                .Get<MinioOptions>() ?? throw new Exception("Minio configuration not found");
-            
-            options.WithEndpoint(minioOptionns.Endpoint);
+            var minioOptions = configuration.GetSection(MinioOptions.Minio)
+                .Get<MinioOptions>() ?? throw new("Minio configuration not found");
+
+            options.WithEndpoint(minioOptions.Endpoint);
+            options.WithCredentials(minioOptions.AccessKey, minioOptions.SecretKey);
             options.WithSSL(false);
-            options.WithCredentials(minioOptionns.AccessKey, minioOptionns.SecretKey);
         });
+
         return services;
     }
 }

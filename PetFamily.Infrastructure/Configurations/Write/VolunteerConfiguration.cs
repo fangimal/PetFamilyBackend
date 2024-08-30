@@ -14,9 +14,12 @@ public class VolunteerConfiguration : IEntityTypeConfiguration<Volunteer>
 
         builder.HasKey(v => v.Id);
 
-        builder.Property(v => v.Name)
-            .IsRequired()
-            .HasMaxLength(Constraints.SHORT_TITLE_LENGTH);
+        builder.ComplexProperty(v => v.FullName, b =>
+        {
+            b.Property(f => f.FirstName).HasColumnName("first_name");
+            b.Property(f => f.LastName).HasColumnName("last_name");
+            b.Property(f => f.Patronymic).HasColumnName("patronymic").IsRequired(false);
+        });
 
         builder.Property(v => v.Description)
             .IsRequired()

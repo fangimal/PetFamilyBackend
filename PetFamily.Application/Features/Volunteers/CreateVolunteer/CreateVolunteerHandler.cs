@@ -3,7 +3,7 @@ using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
 using PetFamily.Domain.ValueObjects;
 
-namespace PetFamily.Application.Features.Volunteer.CreateVolunteer;
+namespace PetFamily.Application.Features.Volunteers.CreateVolunteer;
 
 public class CreateVolunteerHandler
 {
@@ -16,17 +16,18 @@ public class CreateVolunteerHandler
 
     public async Task<Result<Guid, Error>> Handle(CreateVolunteerRequest request, CancellationToken ct)
     {
-        //TODO
-        
         var socialMedias = request.SocialMedias?
             .Select(s =>
             {
                 var social = Social.Create(s.Social).Value;
                 return SocialMedia.Create(s.Link, social).Value;
             }) ?? [];
-        
-        var volunteer = new Domain.Entities.Volunteer(
-            request.Name,
+
+        var fullName = FullName.Create(
+            request.FirstName, request.LastName, request.Patronymic).Value;
+
+        var volunteer = new Volunteer(
+            fullName,
             request.Description,
             request.YearsExperience,
             request.NumberOfPetsFoundHome,

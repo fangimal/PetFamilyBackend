@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
-using PetFamily.Application.Features.Volunteer;
+using PetFamily.Application.Features.Volunteers;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
 using PetFamily.Infrastructure.DbContexts;
@@ -26,7 +26,7 @@ public class VolunteersRepository : IVolunteersRepository
         var result = await _dbContext.SaveChangesAsync(ct);
 
         if (result == 0)  
-            return Errors.General.SaveFailure("Volunteer");
+            return Errors.General.SaveFailure("Volunteers");
 
         return result;
     }

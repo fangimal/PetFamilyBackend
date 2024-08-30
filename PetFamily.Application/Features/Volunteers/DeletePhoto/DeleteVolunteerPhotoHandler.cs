@@ -2,7 +2,7 @@
 using PetFamily.Application.Abstractions;
 using PetFamily.Domain.Common;
 
-namespace PetFamily.Application.Features.Volunteer.DeletePhoto
+namespace PetFamily.Application.Features.Volunteers.DeletePhoto
 {
     public class DeleteVolunteerPhotoHandler
     {

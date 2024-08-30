@@ -5,6 +5,7 @@ using PetFamily.Domain.Common;
 namespace PetFamily.API.Controllers;
 
 [ApiController]
+[Route("[controller]")]
 public class ApplicationController : ControllerBase
 {
     protected new IActionResult Ok(object? result = null)

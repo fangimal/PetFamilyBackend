@@ -1,15 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Minio;
-using Minio.DataModel.Args;
-using PetFamily.Application.Features.Volunteer.CreatePet;
-using PetFamily.Application.Features.Volunteer.CreateVolunteer;
-using PetFamily.Application.Features.Volunteer.DeletePhoto;
-using PetFamily.Application.Features.Volunteer.UploadPhoto;
+using PetFamily.Application.Features.Volunteers.CreatePet;
+using PetFamily.Application.Features.Volunteers.CreateVolunteer;
+using PetFamily.Application.Features.Volunteers.DeletePhoto;
+using PetFamily.Application.Features.Volunteers.UploadPhoto;
 using PetFamily.Infrastructure.Queries.Volunteers.GetPhoto;
 
 namespace PetFamily.API.Controllers;
 
-[Route("[controller]")]
 public class VolunteerController : ApplicationController
 {
     [HttpPost]

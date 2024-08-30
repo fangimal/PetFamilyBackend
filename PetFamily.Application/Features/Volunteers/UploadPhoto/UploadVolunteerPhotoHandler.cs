@@ -3,7 +3,7 @@ using PetFamily.Application.Abstractions;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
 
-namespace PetFamily.Application.Features.Volunteer.UploadPhoto;
+namespace PetFamily.Application.Features.Volunteers.UploadPhoto;
 
 public class UploadVolunteerPhotoHandler
 {

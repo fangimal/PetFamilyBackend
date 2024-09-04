@@ -1,11 +1,12 @@
-﻿using CSharpFunctionalExtensions;
-using PetFamily.Domain.Common;
+﻿using PetFamily.Domain.Common;
+using PetFamily.Domain.Entities;
 
 namespace PetFamily.Application.Features.Volunteers;
 
 public interface IVolunteersRepository
 {
-    Task Add(Domain.Entities.Volunteer volunteer, CancellationToken ct);
-    Task<Result<Domain.Entities.Volunteer, Error>> GetById(Guid id, CancellationToken ct);
-    Task<Result<int, Error>> Save(CancellationToken ct);
+    Task Add(Volunteer volunteer, CancellationToken ct);
+    Task<Result<Volunteer>> GetById(Guid id, CancellationToken ct);
+    Task<Result<int>> Save(CancellationToken ct);
+    
 }

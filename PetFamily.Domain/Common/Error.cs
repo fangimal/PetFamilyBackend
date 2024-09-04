@@ -2,12 +2,13 @@
 
 public class Error
 {
+    public static readonly Error None = new(string.Empty, string.Empty);
+    
     private const string Separator = "||";
-
     public string Code { get; }
     public string Message { get; }
 
-    public Error(string code, string message)
+    public Error(string code, string message) 
     {
         Code = code;
         Message = message;
@@ -75,6 +76,14 @@ public static class Errors
         public static Error PhotoCountLimit()
         {
             return new("volunteers.photo.limit", "Max photo count limit is 5");
+        }
+    }
+    
+    public static class Users
+    {
+        public static Error InvalidCredentials()
+        {
+            return new("users.invalid.credentials", "User's credentials is invalid");
         }
     }
 }

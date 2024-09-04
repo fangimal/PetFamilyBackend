@@ -12,26 +12,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1cd5d34-9307-4282-bb0b-d0b1889d39ea" name="Changes" comment="upload volunteer photos">
-      <change afterPath="$PROJECT_DIR$/PetFamily.API/Controllers/VolunteerApplicationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Features/VolunteerApplications/ApplyVolunteerApplication/ApplyVolunteerApplicationHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Features/VolunteerApplications/ApplyVolunteerApplication/ApplyVolunteerApplicationRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Features/VolunteerApplications/IVolunteerApplicationsRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/CreateVolunteer/CreateVolunteerRequestValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/Entities/Role.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/Entities/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/Entities/VolunteerApplication.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/ValueObjects/ApplicationStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/ValueObjects/FullName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Configurations/Write/RoleConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Configurations/Write/UserConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Configurations/Write/VolunteerApplicationConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Repositories/VolunteerApplicationsRepository.cs" afterDir="false" />
+    <list default="true" id="f1cd5d34-9307-4282-bb0b-d0b1889d39ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PetFamily.API/Attributes/HasPermissionAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.API/Authorization/PermissionPolicyProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.API/Authorization/PermissionsAuthorizationsHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.API/Controllers/AccountController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Constants/Constants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Accounts/IUsersRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Accounts/Login/LoginHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Accounts/Login/LoginRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Providers/IJwtProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/Common/Permissions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/Common/Result.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Domain/Common/ResultT.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Options/JwtOptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Providers/JwtProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Repositories/UsersRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/PetFamily.UnitTests/UploadVolunteerPhotoTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/PetFamily.UnitTests/VolunteersTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PetFamily/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PetFamily/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/Controllers/ApplicationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/Controllers/ApplicationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.API/Controllers/PetController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/Controllers/PetController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/Controllers/VolunteerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/Controllers/VolunteerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.pdb" afterDir="false" />
@@ -41,47 +45,51 @@
       <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/ref/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/ref/PetFamily.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/refint/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/refint/PetFamily.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/PetFamily.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/PetFamily.API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Abstractions/IPetFamilyWriteDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/DataAccess/IPetFamilyWriteDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Abstractions/IMinioProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Providers/IMinioProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/DependencyRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/DependencyRegistration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Dtos/VolunteerDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Dtos/VolunteerDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Dtos/VolunteerPhotoDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Dtos/VolunteerPhotoDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/CreatePet/CreatePetHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/CreatePet/CreatePetHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/CreatePet/CreatePetRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/CreatePet/CreatePetRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/CreatePet/CreatePetRequestValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/CreatePet/CreatePetRequestValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/CreateVolunteer/CreateSocialRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/CreateVolunteer/CreateSocialRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/CreateVolunteer/CreateVolunteerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/CreateVolunteer/CreateVolunteerHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/CreateVolunteer/CreateVolunteerRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/CreateVolunteer/CreateVolunteerRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/DeletePhoto/DeleteVolunteerPhotoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/DeletePhoto/DeleteVolunteerPhotoHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/DeletePhoto/DeleteVolunteerPhotoRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/DeletePhoto/DeleteVolunteerPhotoRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/IVolunteersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/IVolunteersRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/UploadPhoto/UploadVolunteerPhotoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/UploadPhoto/UploadVolunteerPhotoHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteer/UploadPhoto/UploadVolunteerPhotoRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/UploadPhoto/UploadVolunteerPhotoRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/VolunteerApplications/ApplyVolunteerApplication/ApplyVolunteerApplicationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/VolunteerApplications/ApplyVolunteerApplication/ApplyVolunteerApplicationHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/DeletePhoto/DeleteVolunteerPhotoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/DeletePhoto/DeleteVolunteerPhotoHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/UploadPhoto/UploadVolunteerPhotoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/Volunteers/UploadPhoto/UploadVolunteerPhotoHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/PetFamily.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/PetFamily.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/ref/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/ref/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/refint/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/refint/PetFamily.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/PetFamily.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/PetFamily.Application.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Domain/Entities/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/Entities/Pet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Domain/Common/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/Common/Error.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Domain/Entities/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/Entities/Role.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/Entities/Volunteer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/Entities/Volunteer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.pdb" afterDir="false" />
@@ -94,29 +102,33 @@
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/refint/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/refint/PetFamily.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Configurations/Write/VolunteerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Configurations/Write/VolunteerConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/DbContexts/PetFamilyWriteDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/DbContexts/PetFamilyWriteDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/DependencyRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/DependencyRegistration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Migrations/PetFamilyWriteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Migrations/PetFamilyWriteDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetPhoto/GetVolunteerByIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetPhoto/GetVolunteerByIdQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/ReadModels/VolunteerReadModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/ReadModels/VolunteerReadModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Repositories/VolunteerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Repositories/VolunteerRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Providers/MinioProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Providers/MinioProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetPhoto/GetVolunteerByIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetVolunteerById/GetVolunteerByIdQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetPhoto/GetVolunteerByIdResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetVolunteerById/GetVolunteerByIdResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetPhoto/GetVolunteerPhotoRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Volunteers/GetVolunteerById/GetVolunteerPhotoRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Infrastructure.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Infrastructure.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/PetFamily.Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/ref/PetFamily.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/ref/PetFamily.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/refint/PetFamily.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/refint/PetFamily.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/PetFamily.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/PetFamily.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +156,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/Microsoft.Extensions.DependencyInjection/src/ServiceLookup/CallSiteVisitor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/Microsoft.Extensions.DependencyInjection/src/ServiceLookup/DynamicServiceProviderEngine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/Microsoft.Extensions.DependencyInjection.Abstractions/src/ActivatorUtilities.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13456d6e1b274834b65a32d2ae34e2b71308a0/50/87b79422/Constants.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3a03bfdd58ed42a5b2ea17b1fd827c80108200/05/f48306bb/Result`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3a451850004403293b134b9fe18ce3fc8f920/97/eba85bbd/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d4e4fd4d451c0a9d47edebbd4901ab9d217d7d15f447a329896ee30a98adc/NpgsqlTimestampTzTypeMapping.cs" root0="SKIP_HIGHLIGHTING" />
@@ -170,33 +183,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.PetConnect.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.PetFamily.API: IIS Express.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.PetFamily.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.PetConnect.API/Dockerfile.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.PetConnect.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.PetFamily.API: IIS Express.executor": "Run",
+    ".NET Launch Settings Profile.PetFamily.API: http.executor": "Debug",
+    "Docker.PetConnect.API/Dockerfile.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\user\\AppData\\Local\\Symbols\\src&quot;
+    "rider.external.source.directories": [
+      "C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\user\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.PetFamily.API: http">
     <configuration name="PetFamily.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/PetFamily.API/PetFamily.API.csproj" />
@@ -329,7 +343,10 @@
       <workItem from="1723114117771" duration="18693000" />
       <workItem from="1723443411997" duration="15497000" />
       <workItem from="1724654027782" duration="6279000" />
-      <workItem from="1724679572890" duration="41485000" />
+      <workItem from="1724679572890" duration="42543000" />
+      <workItem from="1725251264112" duration="5858000" />
+      <workItem from="1725383059532" duration="10382000" />
+      <workItem from="1725441599575" duration="12785000" />
     </task>
     <task id="LOCAL-00001" summary="add project">
       <option name="closed" value="true" />
@@ -411,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724937119606</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add user, roles">
+      <option name="closed" value="true" />
+      <created>1725023229895</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725023229895</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +467,8 @@
     <MESSAGE value="minio" />
     <MESSAGE value="Complete upload photo volunteer" />
     <MESSAGE value="upload volunteer photos" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload volunteer photos" />
+    <MESSAGE value="add user, roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user, roles" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

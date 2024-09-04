@@ -1,15 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PetFamily.API.Attributes;
 using PetFamily.Application.Features.Volunteers.CreatePet;
 using PetFamily.Application.Features.Volunteers.CreateVolunteer;
 using PetFamily.Application.Features.Volunteers.DeletePhoto;
 using PetFamily.Application.Features.Volunteers.UploadPhoto;
-using PetFamily.Infrastructure.Queries.Volunteers.GetPhoto;
+using PetFamily.Domain.Common;
+using PetFamily.Infrastructure.Queries.Volunteers.GetVolunteerById;
 
 namespace PetFamily.API.Controllers;
 
 public class VolunteerController : ApplicationController
 {
     [HttpPost]
+    [HasPermission(Permissions.Volunteers.Create)]
     public async Task<IActionResult> Create(
         [FromServices] CreateVolunteerHandler handler,
         [FromBody] CreateVolunteerRequest request,
@@ -24,12 +27,13 @@ public class VolunteerController : ApplicationController
     }
 
     [HttpPost("pet")]
+    [HasPermission(Permissions.Pets.Create)]
     public async Task<IActionResult> Create(
-        [FromServices] CreatePetHandler sercvice,
+        [FromServices] CreatePetHandler handler,
         [FromBody] CreatePetRequest request,
         CancellationToken ct)
     {
-        var idResult = await sercvice.Handle(request, ct);
+        var idResult = await handler.Handle(request, ct);
 
         if (idResult.IsFailure)
             return BadRequest(idResult.Error);
@@ -50,21 +54,6 @@ public class VolunteerController : ApplicationController
         return Ok(result.Value);
     }
 
-    // [HttpGet("photo")]
-    // public async Task<IActionResult> GetPhoto(
-    //     string photo,
-    //     [FromServices] IMinioClient client)
-    // {
-    //     var presignedGetObjectArgs = new PresignedGetObjectArgs()
-    //         .WithBucket("images")
-    //         .WithObject(photo)
-    //         .WithExpiry(60 * 60 * 24);
-    //
-    //     var url = await client.PresignedGetObjectAsync(presignedGetObjectArgs);
-    //
-    //     return Ok(url);
-    // }
-    
     [HttpGet("photo")]
     public async Task<IActionResult> GetPhotos(
         [FromServices] GetVolunteerByIdQuery handler,

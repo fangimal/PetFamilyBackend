@@ -1,6 +1,5 @@
 using CSharpFunctionalExtensions;
 using Microsoft.Extensions.Logging;
-using PetFamily.Application.Abstractions;
 using PetFamily.Application.DataAccess;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;

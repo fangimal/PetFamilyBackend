@@ -1,9 +1,8 @@
-﻿using CSharpFunctionalExtensions;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Minio;
 using Minio.DataModel.Args;
-using PetFamily.Application.Abstractions;
+using PetFamily.Application.Providers;
 using PetFamily.Domain.Common;
 
 namespace PetFamily.Infrastructure.Providers;
@@ -21,7 +20,7 @@ public class MinioProvider : IMinioProvider
         _logger = logger;
     }
 
-    public async Task<Result<string, Error>> UploadPhoto(IFormFile photo, string path)
+    public async Task<Result<string>> UploadPhoto(IFormFile photo, string path)
     {
         try
         {
@@ -58,7 +57,7 @@ public class MinioProvider : IMinioProvider
         }
     }
 
-    public async Task<Result<bool, Error>> RemovePhoto(string path)
+    public async Task<Result<bool>> RemovePhoto(string path)
     {
         try
         {
@@ -89,7 +88,7 @@ public class MinioProvider : IMinioProvider
         }
     }
 
-    public async Task<Result<IReadOnlyList<string>, Error>> GetPhotos(IEnumerable<string> paths)
+    public async Task<Result<IReadOnlyList<string>>> GetPhotos(IEnumerable<string> paths)
     {
         try
         {

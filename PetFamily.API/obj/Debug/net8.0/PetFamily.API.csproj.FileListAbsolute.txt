@@ -120,3 +120,12 @@ D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Minio.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.IO.Hashing.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.Reactive.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

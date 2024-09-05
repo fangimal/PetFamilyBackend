@@ -40,12 +40,14 @@ public class GetVolunteerByIdQuery
             return photoUrls.Error;
 
         var volunteerDto = new VolunteerDto(
-            volunteer.Id, 
-            volunteer.Name, 
+            volunteer.Id,
+            volunteer.FirstName,
+            volunteer.LastName,
+            volunteer.Patronymic,
             volunteer.Photos.Select(p => new VolunteerPhotoDto
             {
-                Id = p.Id, 
-                Path = p.Path, 
+                Id = p.Id,
+                Path = p.Path,
                 IsMain = p.IsMain
             }).ToList());
 

@@ -1,4 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
+using PetFamily.Application.DataAccess;
 using PetFamily.Application.Providers;
 using PetFamily.Domain.Common;
 using PetFamily.Domain.Entities;
@@ -9,22 +10,25 @@ public class UploadVolunteerPhotoHandler
 {
     private readonly IMinioProvider _minioProvider;
     private readonly IVolunteersRepository _volunteersRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
     public UploadVolunteerPhotoHandler(
         IMinioProvider minioProvider,
-        IVolunteersRepository volunteersRepository)
+        IVolunteersRepository volunteersRepository,
+        IUnitOfWork unitOfWork)
     {
         _minioProvider = minioProvider;
         _volunteersRepository = volunteersRepository;
+        _unitOfWork = unitOfWork;
     }
-    
+
     public async Task<Result<string, Error>> Handle(UploadVolunteerPhotoRequest request, CancellationToken ct)
     {
         var volunteer = await _volunteersRepository.GetById(request.VolunteerId, ct);
         if (volunteer.IsFailure)
             return volunteer.Error;
 
-        var photoId = Guid.NewGuid(); 
+        var photoId = Guid.NewGuid();
         var path = photoId + Path.GetExtension(request.File.FileName);
 
         var photo = VolunteerPhoto.CreateAndActivate(path);
@@ -39,12 +43,8 @@ public class UploadVolunteerPhotoHandler
         if (objectName.IsFailure)
             return objectName.Error;
 
-        var result = await _volunteersRepository.Save(ct);
-        if (result.IsFailure)
-        {
-            return result.Error;
-        }
+        await _unitOfWork.SaveChangesAsync(ct);
 
         return path;
     }
-} 
+}

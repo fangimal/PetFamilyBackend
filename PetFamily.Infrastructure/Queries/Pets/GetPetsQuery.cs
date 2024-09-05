@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PetFamily.Application.Features.Pets.GetPets;
-using PetFamily.Infrastructure.DbContexts;
+﻿using PetFamily.Infrastructure.DbContexts;
 
 namespace PetFamily.Infrastructure.Queries.Pets
 {

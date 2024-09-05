@@ -1,5 +1,5 @@
-﻿using System.Net;
-using PetFamily.API.Contracts;
+﻿using PetFamily.API.Validation;
+using System.Net;
 using PetFamily.Domain.Common;
 
 namespace PetFamily.API.Middlewares;

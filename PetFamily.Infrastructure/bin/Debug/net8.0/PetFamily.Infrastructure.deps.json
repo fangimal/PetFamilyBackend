@@ -713,7 +713,6 @@
           "BCrypt.Net-Next": "4.0.3",
           "FluentValidation.DependencyInjectionExtensions": "11.9.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
           "PetFamily.Domain": "1.0.0",
           "SharpGrip.FluentValidation.AutoValidation.Mvc": "1.4.0"
         },

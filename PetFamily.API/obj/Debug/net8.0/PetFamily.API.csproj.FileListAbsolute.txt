@@ -129,3 +129,14 @@ D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.Text.Json.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Sinks.Seq.dll

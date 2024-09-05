@@ -1,6 +1,6 @@
 ﻿using PetFamily.Domain.Common;
 
-namespace PetFamily.API.Contracts;
+namespace PetFamily.API.Validation;
 
 public class Envelope
 {

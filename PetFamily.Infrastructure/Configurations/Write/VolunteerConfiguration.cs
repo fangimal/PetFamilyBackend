@@ -13,6 +13,10 @@ public class VolunteerConfiguration : IEntityTypeConfiguration<Volunteer>
         builder.ToTable("volunteers");
 
         builder.HasKey(v => v.Id);
+        
+        builder.HasOne<User>()
+            .WithOne()
+            .HasForeignKey<Volunteer>(v => v.Id);
 
         builder.ComplexProperty(v => v.FullName, b =>
         {

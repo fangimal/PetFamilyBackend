@@ -20,8 +20,9 @@ public class VolunteerApplicationConfiguration : IEntityTypeConfiguration<Volunt
             b.Property(f => f.Patronymic).HasColumnName("patronymic").IsRequired(false);
         });
 
-        builder.ComplexProperty(v => v.Status, b => 
-            { b.Property(f => f.Status).HasColumnName("status"); });
+        builder.ComplexProperty(v => v.Status, b => { b.Property(f => f.Status).HasColumnName("status"); });
+
+        builder.ComplexProperty(v => v.Email, b => { b.Property(v => v.Value).HasColumnName("email"); });
 
         builder.Property(v => v.Description)
             .IsRequired()

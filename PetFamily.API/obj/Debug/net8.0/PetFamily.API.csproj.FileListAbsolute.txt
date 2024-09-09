@@ -140,3 +140,8 @@ D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Si
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Sinks.File.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\System.Text.Json.dll
 D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\bin\Debug\net8.0\StackExchange.Redis.dll

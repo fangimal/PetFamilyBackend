@@ -2,6 +2,7 @@
 using PetFamily.Application.Features.Volunteers.CreatePet;
 using PetFamily.Application.Features.Volunteers.DeletePhoto;
 using PetFamily.Application.Features.Volunteers.UploadPhoto;
+using PetFamily.Application.Providers;
 using PetFamily.Infrastructure.Queries.Volunteers.GetVolunteerById;
 using PetFamily.Infrastructure.Queries.Volunteers.GetVolunteers;
 
@@ -9,6 +10,12 @@ namespace PetFamily.API.Controllers;
 
 public class VolunteerController : ApplicationController
 {
+    private readonly ICacheProvider _cache;
+
+    public VolunteerController(ICacheProvider cache)
+    {
+        _cache = cache;
+    }
 
     [HttpPost("pet")]
     //[HasPermission(Permissions.Pets.Create)]
@@ -27,13 +34,13 @@ public class VolunteerController : ApplicationController
 
     [HttpGet]
     public async Task<ActionResult<GetVolunteersResponse>> GetVolunteers(
-        [FromServices] GetVolunteersQuery query)
+        [FromServices] GetVolunteersQuery query,
+        CancellationToken ct)
     {
-        var response = await query.Handle();
-
+        var response = await query.Handle(ct);
         return Ok(response);
     }
-    
+
     [HttpPost("photo")]
     public async Task<IActionResult> UploadPhoto(
         [FromServices] UploadVolunteerPhotoHandler handler,

@@ -35,7 +35,7 @@ public class GetVolunteerByIdQuery
 
         var photoPathes = volunteer.Photos.Select(p => p.Path);
 
-        var photoUrls = await _minioProvider.GetPhotos(photoPathes);
+        var photoUrls = await _minioProvider.GetPhotos(photoPathes, ct);
         if (photoUrls.IsFailure)
             return photoUrls.Error;
 

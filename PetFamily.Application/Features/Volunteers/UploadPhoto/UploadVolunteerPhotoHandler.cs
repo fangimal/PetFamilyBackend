@@ -39,7 +39,7 @@ public class UploadVolunteerPhotoHandler
         if (isSuccessUpload.IsFailure)
             return isSuccessUpload.Error;
 
-        var objectName = await _minioProvider.UploadPhoto(request.File, path);
+        var objectName = await _minioProvider.UploadPhoto(request.File, path , ct);
         if (objectName.IsFailure)
             return objectName.Error;
 

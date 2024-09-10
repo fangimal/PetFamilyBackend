@@ -33,12 +33,14 @@ public class VolunteerController : ApplicationController
     }
 
     [HttpGet]
-    public async Task<ActionResult<GetVolunteersResponse>> GetVolunteers(
-        [FromServices] GetVolunteersQuery query,
+    public async Task<IActionResult> GetVolunteers([FromServices] GetVolunteersQuery query,
+        [FromQuery] GetVolunteersRequest request,
         CancellationToken ct)
     {
-        var response = await query.Handle(ct);
-        return Ok(response);
+        var idResult = await query.Handle(request, ct);
+        if (idResult.IsFailure)
+            return BadRequest(idResult.Error);
+        return Ok(idResult.Value);
     }
 
     [HttpPost("photo")]
@@ -78,5 +80,13 @@ public class VolunteerController : ApplicationController
             return BadRequest(result.Error);
 
         return Ok(result.Value);
+    }
+    
+    [HttpPost("mail")]
+    public async Task<IActionResult> GetById([FromServices] IMailProvider mailProvider)
+    {
+        await mailProvider.SendMessage("Привет", Guid.Empty);
+
+        return Ok();
     }
 }

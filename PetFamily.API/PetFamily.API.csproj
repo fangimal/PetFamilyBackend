@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>e5deed63-241a-4652-b3c6-2bdb248cd3fe</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PetFamily.Infrastructure\PetFamily.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\.dockerignore">
+      <Link>.dockerignore</Link>
+    </Content>
   </ItemGroup>
 
 </Project>

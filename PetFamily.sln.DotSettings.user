@@ -3,6 +3,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AHangfireServiceCollectionExtensions_002Ecs_002Fl_003AC_0021_003FUsers_003Fuser_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F28b236b45b2069a1eda3696c06a51f4c6d17c924ff4ce494859ec9d23c707_003FHangfireServiceCollectionExtensions_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AIBucketOperations_002Ecs_002Fl_003AC_0021_003FUsers_003Fuser_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fd2853fb7d088f8ce8cbceeaf7b106e6523d65d821faab1a66ec38be9884dd1ab_003FIBucketOperations_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMemoryCacheExtensions_002Ecs_002Fl_003AC_0021_003FUsers_003Fuser_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F24f2bc2f34acd2f18a58dc387a794496d3e71d543498db8da419e3bd3028f5b4_003FMemoryCacheExtensions_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003APostgreSqlStorage_002Ecs_002Fl_003AC_0021_003FUsers_003Fuser_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F88ba97c27b194f7186e371169e1bbc4f2ac00_003F97_003F621fb94c_003FPostgreSqlStorage_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=87963eb8_002D4aee_002D4e5a_002Db09a_002D8dbd15e0c4a1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_with_valid_parameters_return_volunteer" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::8B918D91-8BE9-426C-922B-3B9CF6B9AD5B::net8.0::PetFamily.UnitTests.VolunteersTests&lt;/TestId&gt;&#xD;
@@ -13,4 +14,5 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::8B918D91-8BE9-426C-922B-3B9CF6B9AD5B::net8.0::PetFamily.UnitTests.ValueObjects.EmailTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>

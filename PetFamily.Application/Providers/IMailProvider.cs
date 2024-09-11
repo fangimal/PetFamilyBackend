@@ -1,6 +1,8 @@
+using PetFamily.Application.Messages;
+
 namespace PetFamily.Application.Providers;
 
 public interface IMailProvider
 {
-    Task SendMessage(string message, Guid userId);
+    Task SendMessage(EmailNotification emailNotification);
 }

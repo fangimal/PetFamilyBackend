@@ -81,12 +81,4 @@ public class VolunteerController : ApplicationController
 
         return Ok(result.Value);
     }
-    
-    [HttpPost("mail")]
-    public async Task<IActionResult> GetById([FromServices] IMailProvider mailProvider)
-    {
-        await mailProvider.SendMessage("Привет", Guid.Empty);
-
-        return Ok();
-    }
 }

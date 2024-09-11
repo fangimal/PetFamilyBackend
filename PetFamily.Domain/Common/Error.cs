@@ -71,7 +71,13 @@ public static class Errors
             return new("record.save.failure", $"{label} failed to save");
         }
     }
-
+    public static class Email
+    {
+        public static Error FailedToSendEmail()
+        {
+            return new("email.send.fail", "Fail to send email");
+        }
+    }
     public static class Volunteers
     {
         public static Error PhotoCountLimit()

@@ -13,6 +13,8 @@
       - ASPNETCORE_HTTP_PORTS=5000
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+    labels:
+      com.jetbrains.rider.debug: "true"
   postgres:
     container_name: postgres
     image: postgres

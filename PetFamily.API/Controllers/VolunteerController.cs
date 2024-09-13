@@ -27,7 +27,7 @@ public class VolunteerController : ApplicationController
         var idResult = await handler.Handle(request, ct);
 
         if (idResult.IsFailure)
-            return BadRequest(idResult.Error);
+            return BadRequest(idResult.Error);  
 
         return Ok(idResult.Value);
     }

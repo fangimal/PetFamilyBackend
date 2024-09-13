@@ -13,17 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1cd5d34-9307-4282-bb0b-d0b1889d39ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.API/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Application/MessageBus/IMessageBus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Application/Messages/EmailNotification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Consumers/EmailNotificationConsumer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/MessageBuses/EmailMessageBus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/MessageBuses/EmailMessageChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFamily.API/Controllers/PetsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PetFamily/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PetFamily/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/Controllers/PetController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/Controllers/VolunteerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/Controllers/VolunteerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.API/Extensions/ApiExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/Extensions/ApiExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.API/PetFamily.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/PetFamily.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/bin/Debug/net8.0/PetFamily.API.dll" afterDir="false" />
@@ -39,13 +32,13 @@
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/PetFamily.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/ref/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/ref/PetFamily.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/refint/PetFamily.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.API/obj/Debug/net8.0/refint/PetFamily.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Features/VolunteerApplications/ApproveVolunteerApplication/ApproveVolunteerApplicationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Features/VolunteerApplications/ApproveVolunteerApplication/ApproveVolunteerApplicationHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Providers/IMailProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Providers/IMailProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Application/Dtos/PetDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/Dtos/PetDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/bin/Debug/net8.0/PetFamily.Domain.dll" afterDir="false" />
@@ -53,12 +46,10 @@
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/PetFamily.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/ref/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/ref/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/refint/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Application/obj/Debug/net8.0/refint/PetFamily.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Domain/Common/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/Common/Error.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/bin/Debug/net8.0/PetFamily.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/PetFamily.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/PetFamily.Domain.AssemblyInfo.cs" afterDir="false" />
@@ -68,7 +59,7 @@
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/ref/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/ref/PetFamily.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/refint/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Domain/obj/Debug/net8.0/refint/PetFamily.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/DependencyRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/DependencyRegistration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Providers/MailProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/Providers/MailProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/Queries/Pets/GetAllPetsQuery.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/bin/Debug/net8.0/PetFamily.Domain.dll" afterDir="false" />
@@ -84,7 +75,6 @@
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/ref/PetFamily.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/ref/PetFamily.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/refint/PetFamily.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.Infrastructure/obj/Debug/net8.0/refint/PetFamily.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFamily.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/PetFamily.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/PetFamily.UnitTests/obj/Debug/net8.0/PetFamily.UnitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/PetFamily.UnitTests/obj/Debug/net8.0/PetFamily.UnitTests.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/PetFamily.UnitTests/obj/Debug/net8.0/PetFamily.UnitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/PetFamily.UnitTests/obj/Debug/net8.0/PetFamily.UnitTests.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/PetFamily.UnitTests/obj/Debug/net8.0/PetFamily.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/PetFamily.UnitTests/obj/Debug/net8.0/PetFamily.UnitTests.csproj.AssemblyReference.cache" afterDir="false" />
@@ -100,12 +90,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;fangimal&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/fangimal/PetFamilyBackend.git&quot;,
+    &quot;accountId&quot;: &quot;f0cb4ddd-f1cf-4d12-ad41-50ccf0b69f37&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/DefaultBuilder/src/WebApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Mvc/Mvc.Core/src/ApplicationModels/ApiBehaviorApplicationModelProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Mvc/Mvc.Core/src/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Mvc/Mvc.Core/src/Infrastructure/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Mvc/Mvc/src/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Mvc/Mvc/src/MvcServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/efcore/28d89feb31fcb0d219fba0120bb67f3f8218de3a/src/EFCore/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/efcore/6a2be34d045329d9eff9536ec824226696d53e00/src/EFCore/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/efcore/6a2be34d045329d9eff9536ec824226696d53e00/src/EFCore/DbContextOptionsBuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -123,19 +125,22 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3a03bfdd58ed42a5b2ea17b1fd827c80108200/05/f48306bb/Result`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb5b910/46/aeb247cf/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88ba97c27b194f7186e371169e1bbc4f2ac00/97/621fb94c/PostgreSqlStorage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b415e10f5ba4a949da6625f698e9c5d26a7c0/97/fb02cb08/IEntityTypeConfiguration`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b415e10f5ba4a949da6625f698e9c5d26a7c0/c3/457fbdd3/IEntityTypeConfiguration`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d3a451850004403293b134b9fe18ce3fc8f920/97/eba85bbd/Void.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/23c646a82d4df66af1cb96f366d74b6bf136a4ca66a38de00ceae827db540f3/SwaggerBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/24f2bc2f34acd2f18a58dc387a794496d3e71d543498db8da419e3bd3028f5b4/MemoryCacheExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/28b236b45b2069a1eda3696c06a51f4c6d17c924ff4ce494859ec9d23c707/HangfireServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2defb41d87a48ff143adc586b639ba3a80759c1971fd26591e7d4249a31b7c/ReturnsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2e49d132ea68ff47071c64476ae29138fa965dc555ef7c3f4991586431de241/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f90c6c13479b8c2a5be98f3d75dfc3bd885a055652d8a32904ca2448132949e/Future.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/89fc03ca4e165e42ae4986035c8134456453dfd324d3af5cea356e64881201c/UseMiddlewareExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/95fc571df74c88edcdd2fb9f2e804132aa893358f3e0d8bca643299aed8dbc/SwaggerGenServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d2853fb7d088f8ce8cbceeaf7b106e6523d65d821faab1a66ec38be9884dd1ab/IBucketOperations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d4e4fd4d451c0a9d47edebbd4901ab9d217d7d15f447a329896ee30a98adc/NpgsqlTimestampTzTypeMapping.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ecd8e98eb92488c141ef35e83b1fe36b34a47aed9c53f04ef269f3874579caae/CompatibilityExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5f29f8ad09a2791dd1b4377273475352366e26dff81e2144329cf5411ba16cd/AuthAppBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contracts/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PetFamily.API/Controllers/PetController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PetFamily.API/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PetFamily.API/Middlewares/ExeptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PetFamily.API/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -178,7 +183,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Dockerfile",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -318,7 +323,9 @@
       <workItem from="1725944247929" duration="8275000" />
       <workItem from="1725960183048" duration="10880000" />
       <workItem from="1726029620588" duration="784000" />
-      <workItem from="1726033940956" duration="8948000" />
+      <workItem from="1726033940956" duration="16384000" />
+      <workItem from="1726117876234" duration="13743000" />
+      <workItem from="1726197861057" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="add project">
       <option name="closed" value="true" />
@@ -440,7 +447,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725984006708</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added producer consumer">
+      <option name="closed" value="true" />
+      <created>1726043740203</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726043740203</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +492,27 @@
     <MESSAGE value="add approved volunteer application and improve user entity" />
     <MESSAGE value="added redis" />
     <MESSAGE value="added mail provider and HangfireWorker" />
-    <option name="LAST_COMMIT_MESSAGE" value="added mail provider and HangfireWorker" />
+    <MESSAGE value="added producer consumer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added producer consumer" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PetFamily.API/Program.cs</url>
+          <line>23</line>
+          <properties documentPath="D:\Learn\C#\Boosty\Exersiese\PetFamily\PetFamily.API\Program.cs" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="690" />
+            </startOffsets>
+            <endOffsets>
+              <option value="775" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

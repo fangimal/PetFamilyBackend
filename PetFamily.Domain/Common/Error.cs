@@ -1,4 +1,6 @@
-﻿namespace PetFamily.Domain.Common;
+﻿using PetFamily.Domain.Entities;
+
+namespace PetFamily.Domain.Common;
 
 public class Error
 {
@@ -78,11 +80,29 @@ public static class Errors
             return new("email.send.fail", "Fail to send email");
         }
     }
+    
+    public static class Pets
+    {
+        public static Error PhotoCountLimit()
+        {
+            return new("pets.photo.limit", $"Max photo count limit is {Pet.PHOTO_COUNT_LIMIT}");
+        }
+    }
     public static class Volunteers
     {
         public static Error PhotoCountLimit()
         {
-            return new("volunteers.photo.limit", "Max photo count limit is 5");
+            return new("volunteers.photo.limit", $"Max photo count limit is {Volunteer.PHOTO_COUNT_LIMIT}");
+        }
+        
+        public static Error FileTypeInvalid(string? fileType)
+        {
+            return new("invalid.file.type", $"This {fileType}: file type is invalid");
+        }
+
+        public static Error FileLengthInvalid(long? length)
+        {
+            return new("invalid.file.length", $"This {length}: file length is invalid");
         }
     }
 

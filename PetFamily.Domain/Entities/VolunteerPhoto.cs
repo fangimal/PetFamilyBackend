@@ -1,26 +1,24 @@
-﻿using CSharpFunctionalExtensions;
-using PetFamily.Domain.Common;
-using Entity = PetFamily.Domain.Common.Entity;
+﻿using PetFamily.Domain.Common;
 
 namespace PetFamily.Domain.Entities;
 
-public class VolunteerPhoto : Entity
+public class VolunteerPhoto : Photo
 {
-    private VolunteerPhoto()
+    public VolunteerPhoto(string path, bool isMain)
+        : base(path, isMain)
     {
     }
 
-    private VolunteerPhoto(string path, bool isMain)
+    public static Result<VolunteerPhoto> CreateAndActivate(
+        string path,
+        string contentType,
+        long length,
+        bool isMain)
     {
-        Path = path;
-        IsMain = isMain;
-    }
-
-    public string Path { get; private set; }
-    public bool IsMain { get; private set; }
-
-    public static Result<VolunteerPhoto, Error> CreateAndActivate(string path)
-    {
-        return new VolunteerPhoto(path, true);
+        if (contentType != JPG && contentType != JPEG && contentType != PNG)
+            return Errors.Volunteers.FileTypeInvalid(contentType);
+        if (length > 10000)
+            return Errors.Volunteers.FileLengthInvalid(length);
+        return new VolunteerPhoto(path, isMain);
     }
 }

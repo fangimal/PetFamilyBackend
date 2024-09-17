@@ -1,9 +1,11 @@
 using Hangfire;
+using Microsoft.EntityFrameworkCore;
 using PetFamily.API.Extensions;
 using PetFamily.API.Middlewares;
 using PetFamily.API.Validation;
 using PetFamily.Application;
 using PetFamily.Infrastructure;
+using PetFamily.Infrastructure.DbContexts;
 using PetFamily.Infrastructure.Jobs;
 using Serilog;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
@@ -46,6 +48,10 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+var scope = app.Services.CreateScope();
+var dbContext = scope.ServiceProvider.GetRequiredService<PetFamilyWriteDbContext>();
+await dbContext.Database.MigrateAsync();
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseSerilogRequestLogging();

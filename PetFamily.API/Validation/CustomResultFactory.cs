@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using PetFamily.API.Contracts;
 using PetFamily.Domain.Common;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Results;
 

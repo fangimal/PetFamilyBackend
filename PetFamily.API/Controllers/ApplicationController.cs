@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PetFamily.API.Validation;
+using PetFamily.API.Contracts;
+using PetFamily.Domain.Common;
 
 namespace PetFamily.API.Controllers;
 
@@ -14,16 +15,20 @@ public abstract class ApplicationController : ControllerBase
         return base.Ok(envelope);
     }
 
-    protected IActionResult BadRequest(params ErrorInfo[] errors)
+    protected IActionResult BadRequest(Error? error)
     {
-        var envelope = Envelope.Error(errors);
+        var errorInfo = new ErrorInfo(error);
+        
+        var envelope = Envelope.Error(errorInfo);
 
         return base.BadRequest(envelope);
     }
 
-    protected IActionResult NotFound(params ErrorInfo[] errors)
+    protected IActionResult NotFound(Error? error)
     {
-        var envelope = Envelope.Error(errors);
+        var errorInfo = new ErrorInfo(error);
+        
+        var envelope = Envelope.Error(errorInfo);
 
         return base.NotFound(envelope);
     }

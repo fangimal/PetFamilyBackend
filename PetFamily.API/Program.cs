@@ -1,4 +1,7 @@
+using Confluent.Kafka;
+using Confluent.Kafka.Admin;
 using Hangfire;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PetFamily.API.Extensions;
 using PetFamily.API.Middlewares;
@@ -7,9 +10,10 @@ using PetFamily.Application;
 using PetFamily.Infrastructure;
 using PetFamily.Infrastructure.DbContexts;
 using PetFamily.Infrastructure.Jobs;
+using PetFamily.Infrastructure.Kafka;
 using Serilog;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
-
+//"applicationUrl": "http://localhost:5029"
 var builder = WebApplication.CreateBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
@@ -21,7 +25,11 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Services.AddSwagger();
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSerilog();
+
+builder.Services.AddSingleton<KafkaMessageProducer>();
+builder.Services.AddHostedService<NotificationWorker>();
 
 builder.Services
     .AddApplication()
@@ -66,9 +74,40 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapPost("kafka",
+    async (
+        [FromQuery] string topic,
+        [FromBody] string message,
+        KafkaMessageProducer producer) =>
+    {
+        await producer.Publish(topic, message);
+    });
+
 app.UseHangfireDashboard();
 app.MapHangfireDashboard();
 
 HangfireWorker.StartRecurringJobs();
+
+var kafkaConfig = new AdminClientConfig()
+{
+    BootstrapServers = "localhost:9092",
+};
+
+using var kafkaAdminClient = new AdminClientBuilder(kafkaConfig).Build();
+
+var metaData = kafkaAdminClient.GetMetadata(TimeSpan.FromSeconds(5));
+
+var topic = metaData.Topics.FirstOrDefault(t => t.Topic == "test-topic");
+
+if (topic is null)
+{
+    var topicSpecification = new TopicSpecification()
+    {
+        Name = "test-topic",
+        NumPartitions = 2
+    };
+
+    await kafkaAdminClient.CreateTopicsAsync([topicSpecification]);
+}
 
 app.Run();

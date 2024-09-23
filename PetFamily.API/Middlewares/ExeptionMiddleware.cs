@@ -1,4 +1,5 @@
-﻿using PetFamily.API.Validation;
+﻿using PetFamily.API.Contracts;
+using PetFamily.API.Validation;
 using System.Net;
 using PetFamily.Domain.Common;
 

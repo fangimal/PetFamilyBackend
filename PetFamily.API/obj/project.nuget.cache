@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Up1UJbT2LVo=",
+  "dgSpecHash": "+QmTA6QIDBE=",
   "success": true,
   "projectFilePath": "D:\\Learn\\C#\\Boosty\\Exersiese\\PetFamily\\PetFamily.API\\PetFamily.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\communitytoolkit.highperformance\\8.2.2\\communitytoolkit.highperformance.8.2.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\confluent.kafka\\2.5.3\\confluent.kafka.2.5.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\csharpfunctionalextensions\\2.42.5\\csharpfunctionalextensions.2.42.5.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\efcore.namingconventions\\8.0.3\\efcore.namingconventions.8.0.3.nupkg.sha512",
@@ -17,6 +18,7 @@
     "C:\\Users\\user\\.nuget\\packages\\hangfire.netcore\\1.8.14\\hangfire.netcore.1.8.14.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\hangfire.postgresql\\1.20.9\\hangfire.postgresql.1.20.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\librdkafka.redist\\2.5.3\\librdkafka.redist.2.5.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mailkit\\4.7.1.1\\mailkit.4.7.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
